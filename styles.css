@@ -1,54 +1,154 @@
-body{
+body {
     background-color: #F2F2EB;
     font-family: 'Poppins';
+    padding-bottom: 20px;
 }
 
-h1
-{
+.container {
+    margin: auto;
+    width: 50%;
+    padding: 10%;
+}
+
+h1 {
     color: #010103;
+    font-weight: 500;
+    font-size: 40px;
 }
 
-h2
-{
-    font-family: 'Poppins';
+h2 {
     color: #010103;
+    font-weight: 500;
+    position: relative;
+    float: left;
+    font-size: 20px;
+    margin: auto;
+    
 }
 
-
-h3
-{
+h3 {
     font-weight: 500;
     color: #4B5658;
+    font-size: 20px;
 }
 
-h4
-{
+h4 {
     font-weight: 500;
     color: #939A9B;
+    font-size: 20px;
 }
 
-p
-{
+p {
     font-style: normal;
     font-weight: 400;
     color: #4B5658;
+    font-size: 20px;
 }
 
-div.intro
-{
+div.intro {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
+.intro div {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+img {
+    position: relative;
+    float: left;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 
 }
 
-div.i-pfp
-{
-
+.i-text {  
+    word-wrap: break-word;
+    margin-left: 30%;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
-input[type=text], select, textarea
-{
+.i-text div {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+.i-desc {  
+    margin-top: 20%;
+}
+
+div.accent {
+    position: relative;
+    z-index: -1;
+    padding: 3% 15%;
+}
+
+.arrow {
+    position: relative;
+    padding-top: 0.9%;
+    left: 1%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.website,
+.comm {
+    padding-top: 3%;
+    justify-content: center;
+    height: 350px;
+}
+
+.w-img,
+.c-img {
+    padding: 2%;
+    width: auto;
+}
+
+.w-text,
+.c-text {
+    position: relative;
+    padding-left: 30%;
+    margin-top: -2%;
+}
+
+.w-desc,
+.c-desc {
+    padding-top: 4%;
+}
+
+.p1-date {
+    width: auto;
+    padding-top: 2%;
+}
+
+.p1-text {
+    position: relative;
+    margin-top: -2%;
+}
+
+.p1-title {
+    position: relative;
+}
+
+.p1-desc {
+    padding-top: 4%;
+    height: 250px;
+}
+
+.ct-desc {
+    padding-top: 4%;
+    height: 150px;
+}
+
+input[type=text], select, textarea {
     width: 100%; /* Full width */
-    padding: 15px; /* Some padding */ 
+    padding: 20px; /* Some padding */ 
     border: 0px;
     border-radius: 20px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
@@ -57,16 +157,28 @@ input[type=text], select, textarea
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
     font-family: 'Poppins';
     font-weight: 500;
+    font-size: 20px;
 }
 
-input[type=submit]
-{
+input[type=submit] {
     background: linear-gradient(81.61deg, #E3A761 -20.86%, #FCBE91 97.36%);
     font-family: 'Poppins';
     font-weight: 500;
+    font-size: 20px;
     color: #010103;
     padding: 12px 23px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.social {
+    position: relative;
+    z-index: -1;
+    padding: 20%;
+    padding-left: 20%;
+    margin-top: -23%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 185px;
 }
