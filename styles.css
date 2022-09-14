@@ -1,10 +1,10 @@
 body{
     background-color: #F2F2EB;
+    font-family: 'Poppins';
 }
 
 h1
 {
-    font-family: 'Poppins';
     color: #010103;
 }
 
@@ -17,21 +17,18 @@ h2
 
 h3
 {
-    font-family: 'Poppins';
     font-weight: 500;
     color: #4B5658;
 }
 
 h4
 {
-    font-family: 'Poppins';
     font-weight: 500;
     color: #939A9B;
 }
 
 p
 {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     color: #4B5658;
@@ -57,7 +54,9 @@ input[type=text], select, textarea
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    font-family: 'Poppins';
+    font-weight: 500;
 }
 
 input[type=submit]
