@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 body {
     background-color: #F2F2EB;
     font-family: 'Poppins';
@@ -6,7 +8,7 @@ body {
 
 .container {
     margin: auto;
-    width: 50%;
+    width: 1000px;
     padding: 10%;
 }
 
@@ -14,6 +16,7 @@ h1 {
     color: #010103;
     font-weight: 500;
     font-size: 40px;
+    margin: 0; /* */
 }
 
 h2 {
@@ -22,7 +25,7 @@ h2 {
     position: relative;
     float: left;
     font-size: 20px;
-    margin: auto;
+    margin: 0;
     
 }
 
@@ -48,43 +51,47 @@ p {
 div.intro {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto auto; /* */
+    grid-column-gap: 50px; /* */
+    margin-bottom: 80px; /* */
 }
 
-.intro div {
-    grid-row-start: 1;
-    grid-column-start: 1;
-}
-
-img {
+.i-title {
     position: relative;
-    float: left;
-    max-width: 100%;
-    height: auto;
-    width: auto\9; /* ie8 */
-
 }
 
 .i-text {  
     word-wrap: break-word;
-    margin-left: 30%;
-    display: grid;
-    grid-template-columns: 1fr;
+    /* */
+    /* */
+}
+
+.i-pfp {
+    max-width: 100%;
+    height: auto;
+    display: flex; /* */
+    align-items: center; /* */
+    justify-content: center; /* */
 }
 
 .i-text div {
-    grid-row-start: 1;
-    grid-column-start: 1;
+    /* */
+    /* */
 }
 
 .i-desc {  
-    margin-top: 20%;
+    /* */
 }
 
 div.accent {
-    position: relative;
+    position: absolute;
     z-index: -1;
-    padding: 3% 15%;
+    left: 155px;
+    bottom: 0;
+    background: linear-gradient(81.61deg, #E3A761 -20.86%, #FCBE91 97.36%); /* */
+    width: 172px; /* */
+    height: 27px; /* */
+    border-radius: 20px; /* */
 }
 
 .arrow {
@@ -99,27 +106,31 @@ a {
 
 .website,
 .comm {
-    padding-top: 3%;
     justify-content: center;
-    height: 350px;
+    /* height: 350px; */
+    display: flex;
+    margin-bottom: 50px;
+    align-items: center;
 }
 
 .w-img,
 .c-img {
-    padding: 2%;
-    width: auto;
+    padding: 0px 70px 0px 20px;
 }
 
-.w-text,
-.c-text {
-    position: relative;
-    padding-left: 30%;
-    margin-top: -2%;
+.p-title,
+.w-title,
+.c-title {
+    display: flex;
+    align-items: center;
+}
+
+.p-title {
+    margin-bottom: 10px;
 }
 
 .w-desc,
 .c-desc {
-    padding-top: 4%;
 }
 
 .p1-date {
@@ -170,15 +181,65 @@ input[type=submit] {
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.5s ease;
+}
+
+input[type=submit]:hover {
+    background: linear-gradient(30.61deg, #E3A761 -20.86%, #FCBE91 97.36%);
+    transition: 0.5s ease;
 }
 
 .social {
     position: relative;
-    z-index: -1;
-    padding: 20%;
+    /* padding: 20%;
     padding-left: 20%;
-    margin-top: -23%;
+    margin-top: -25%; */
     display: flex;
     justify-content: space-between;
-    max-width: 185px;
+    /* max-width: 185px; */
+    transition: 0.5s ease;
+    width: 200px;
+    margin-left: 50px;
+}
+
+#linkedin:hover,
+#github:hover,
+#behance:hover,
+#twitter:hover {
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+
+.form-lower {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 685px) {
+    div.intro {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    .website,
+    .comm {
+        flex-direction: column;
+    }
+
+    .w-img,
+    .c-img {
+        padding: 0px 0px 20px 0px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    div.accent {
+        left: 20px;
+    }
 }
