@@ -74,15 +74,6 @@ div.intro {
     justify-content: center; /* */
 }
 
-.i-text div {
-    /* */
-    /* */
-}
-
-.i-desc {  
-    /* */
-}
-
 div.accent {
     position: absolute;
     z-index: -1;
