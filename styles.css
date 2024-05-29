@@ -91,18 +91,22 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+  margin-bottom: 3rem;
+}
+
 @media screen and (max-width: 500px) {
   .atm {
     flex-direction: column;
     gap: 20px;
   }
-}
 
-.works {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 50px;
-  margin-bottom: 3rem;
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
 .grid-container {
