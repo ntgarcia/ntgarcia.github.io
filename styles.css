@@ -84,6 +84,16 @@ a:hover {
   }
 }
 
+br.responsive {
+  display: inline;
+}
+
+@media (min-width: 600px) {
+  br.responsive {
+    display: none;
+  }
+}
+
 .atm {
   display: flex;
   gap: 80px;
