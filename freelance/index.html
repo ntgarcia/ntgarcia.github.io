@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Freelance - Nathan Garcia</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  </head>
+  <body>
+    <a href="/">←</a>
+    <h1>Freelance Graphic & Visual Design</h1>
+
+    <h2>INTRO</h2>
+    <p>
+      Since the start of 2022, I began operating as a freelance designer
+      offering contract work and services. I have collaborated with multiple
+      virtual streaming agencies and organizations, and have created designs
+      ranging from stream assets to official key art and merchandise.
+    </p>
+
+    <h2>CLIENTS</h2>
+    <br />
+    <img src="clients.png" alt="Clients" />
+    <figcaption>
+      I have collaborated with multiple companies and organizations including
+      osu!, VeXpo, Idol Corp, and more.
+    </figcaption>
+    <br />
+
+    <h2>SELECTED WORK</h2>
+    <img src="osu_mousepad.png" alt="osu_Mousepad" />
+    <figcaption>Official osu! Mousepad 2024</figcaption>
+    <br />
+    <br />
+    <br />
+    <img src="osu_clothing.png" alt="osu_Clothing" />
+    <figcaption>Official osu! Merch 2024 T-Shirt</figcaption>
+    <br />
+    <br />
+    <br />
+    <img src="vexpo.png" alt="VeXpo" />
+    <figcaption>Official VeXpo Promotional Posters</figcaption>
+    <br />
+    <br />
+    <br />
+    <img src="idol.png" alt="Idol Corp" />
+    <figcaption>Stream Design for Idol Corp - Kai Saikota</figcaption>
+    <br />
+    <br />
+    <br />
+    <img src="v-dere.png" alt="V-Dere" />
+    <figcaption>Stream Design for V-Dere - Elia Stellaria</figcaption>
+    <br />
+    <br />
+    <br />
+    <figcaption>
+      <a href="/">Return to Home Page</a>
+      <p>Last Updated 5/29/2024</p>
+    </figcaption>
+
+    <div class="footer">
+      <div class="grid-item" style="display: flex">
+        <div class="rotate">✦</div>
+        <span id="datetime"></span>
+        <script>
+          function updateDateTime() {
+            const now = new Date();
+            const currentDateTime = now.toLocaleString();
+            document.querySelector("#datetime").textContent = currentDateTime;
+          }
+          setInterval(updateDateTime, 1000);
+        </script>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:hello@ntns.me" target="_blank">Email</a>
+        <a href="resume\Nathan_Garcia_Resume_2024.pdf" target="_blank"
+          >Resume</a
+        >
+        <a href="https://www.linkedin.com/in/ntns/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ntgarcia" target="_blank">Github</a>
+      </div>
+    </div>
+  </body>
+</html>

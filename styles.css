@@ -12,13 +12,13 @@ body {
   margin-right: auto;
   padding-left: 2em;
   padding-right: 2em;
-  animation: drop-in 1.5s ease 50ms backwards;
+  animation: fade-up 0.5s ease 50ms backwards;
 }
 
-@keyframes drop-in {
+@keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
