@@ -47,10 +47,15 @@ body {
   outline-color: blue;
   padding: 2ch;
   border-radius: 1ch;
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-basis: 40%;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.nav a {
+  margin: 0 6px;
 }
 
 .contact {
@@ -62,6 +67,7 @@ body {
   border-radius: 1ch;
   flex: 1;
   flex-wrap: nowrap;
+  align-content: center;
   text-align: center;
   text-wrap: nowrap;
 }
