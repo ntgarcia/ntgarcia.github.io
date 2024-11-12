@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  font-family: "Schibsted Grotesk", sans-serif;
-  font-weight: 400;
-  font-size: medium;
-  background-color: black;
-  color: gray;
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: x-large;
+  font-style: normal;
+  background-color: gainsboro;
+  color: blue;
   margin-top: 8vh;
   max-width: 40em;
   margin-left: auto;
@@ -29,30 +30,54 @@ body {
 h1 {
   font-weight: 400;
   font-size: xx-large;
-  color: lightgray;
+  color: blue;
 }
 
 h2 {
   font-weight: 700;
   font-size: small;
-  color: lightgray;
+  color: blue;
   padding-top: 24px;
 }
 
 h3 {
-  font-weight: 400;
-  font-size: medium;
+  font-weight: 500;
+  font-size: x-large;
 }
 
 a {
   text-decoration: underline;
-  color: white;
+  color: blue;
   transition: 0.3s;
 }
 
 a:hover {
   text-decoration: underline dotted;
   background-color: none;
+}
+
+.main {
+  position: relative;
+}
+
+.main:before {
+  content: "web㌁site ㏌ co㎱truction";
+  font-size: 600%;
+  position: absolute;
+  animation: spin 3s linear infinite;
+  color: whitesmoke;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
 }
 
 .artsy {
@@ -80,10 +105,10 @@ a:hover {
 
 @keyframes blink {
   0% {
-    background-color: gray;
+    background-color: blue;
   }
   49% {
-    background-color: gray;
+    background-color: blue;
   }
   50% {
     background-color: transparent;
@@ -92,7 +117,7 @@ a:hover {
     background-color: transparent;
   }
   100% {
-    background-color: gray;
+    background-color: blue;
   }
 }
 
@@ -143,8 +168,8 @@ br.responsive {
 }
 
 .links {
-  display: flex;
-  gap: 12px;
+  display: flexbox;
+  justify-content: space-between;
   margin-bottom: 2rem;
 }
 
@@ -190,20 +215,20 @@ li::marker {
 }
 
 .rotate {
-  font-size: small;
+  font-size: xx-large;
   max-width: fit-content;
-  animation: spin 3s linear infinite;
   margin-right: 12px;
+  color: blue;
 }
 
-@keyframes spin {
+@keyframes pulse {
   0% {
-    transform: rotateY(0deg) rotateZ(0deg);
+    filter: blur(0px);
   }
   50% {
-    transform: rotateY(180deg) rotateZ(0deg);
+    filter: blur(2px);
   }
   100% {
-    transform: rotateY(360deg) rotateZ(0deg);
+    filter: blur(0px);
   }
 }

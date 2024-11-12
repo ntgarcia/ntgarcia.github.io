@@ -9,112 +9,35 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
   </head>
   <body>
-    <h3>
-      🜹 <a href="/">Nathan Garcia</a> is a
-      <span class="artsy">designer</span> and
-      <span class="nerdy">programmer</span> based in Calgary, Alberta.
-    </h3>
-
-    <span class="tagline">He designs digital products focusing on <br class="responsive"> <span class="typed-text"></span><span class="cursor">&nbsp;</span></p></span>
-  </div>
-  <script>
-    const typedTextSpan = document.querySelector(".typed-text");
-    const cursorSpan = document.querySelector(".cursor");
-
-    const textArray = ["beautifully simple interfaces.", "seamless user experiences.", "forward-thinking design."];
-    const typingDelay = 100;
-    const erasingDelay = 80;
-    const newTextDelay = 1000;
-    let textArrayIndex = 0;
-    let charIndex = 0;
-
-    function type() {
-      if (charIndex < textArray[textArrayIndex].length) {
-        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, typingDelay);
-      } 
-      else {
-        cursorSpan.classList.remove("typing");
-        setTimeout(erase, newTextDelay);
-      }
-    }
-
-    function erase() {
-      if (charIndex > 0) {
-        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-        charIndex--;
-        setTimeout(erase, erasingDelay);
-      } 
-      else {
-        cursorSpan.classList.remove("typing");
-        textArrayIndex++;
-        if(textArrayIndex>=textArray.length) textArrayIndex=0;
-        setTimeout(type, typingDelay + 1100);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-      if(textArray.length) setTimeout(type, newTextDelay + 250);
-    });
-  </script>
-
-    <div class="atm">
-      <div>Currently: <br />Studying CS @ MRU</div>
-      <div>Previously: <br />IT @ SAIT, Intern @ AHS</div>
-    </div>
-
+    <div class="main"></div>
+    NATHAN GARCIA
+    <br />
+    Programmer & Designer based in Calgary, AB
+    <br />
+    <br />
+    I craft <a href="">elegant coding solutions with purposeful design.</a>
+    <br />
+    <br />
+    Currently pursuing a
+    <br />
+    Bachelor of Computer Information Systems
+    <br />
+    @ Mount Royal University.
+    <br />
+    <br />
+    I am also a freelance graphic designer working on
+    <br />
+    <a href="">branding, merchandise, and other assets</a>
+    <br />
+    for creators and organizations within the digital sphere.
     <p class="links">
-      ❯
-      <a href="mailto:hello@ntns.me" target="_blank">Email</a>
-      <a href="resume\Nathan_Garcia_Resume_2024.pdf" target="_blank">Resume</a>
+      <a href="mailto:hello@ntns.me" target="_blank">hello@ntns.me</a>
+      <a href="resume\Nathan_Garcia_Resume_2024.pdf" target="_blank">CV</a>
       <a href="https://www.linkedin.com/in/ntns/" target="_blank">LinkedIn</a>
       <a href="https://github.com/ntgarcia" target="_blank">Github</a>
+      <a href="https://www.are.na/nathan-garcia/channels" target="_blank"
+        >are.na</a
+      >
     </p>
-
-    <p>⊹ Projects:</p>
-
-    <div class="projects">
-      <div class="grid-item">
-        <a href="cail\">
-          <img class="preview" src="cail\cail-preview.png" alt="CAIL" />
-        </a>
-        <br />
-        <a href="cail\">CAIL</a>
-        Supporting Inclusive Inter-Generational Communities
-      </div>
-      <div class="grid-item">
-        <a href="freelance\">
-          <img class="preview" src="img\freelance-preview.png" alt="freelance" />
-        </a>
-        <br />
-        <a href="freelance\">Freelance</a>
-        Crafting Design Assets for Global Creators
-      </div>
-    </div>
-
-    <div class="footer">
-      <div class="grid-item" style="display: flex;">
-        <div class="rotate">✦</div>
-        <span id="datetime"></span>
-        <script>
-          function updateDateTime() {
-            const now = new Date();
-            const currentDateTime = now.toLocaleString();
-            document.querySelector("#datetime").textContent = currentDateTime;
-          }
-          setInterval(updateDateTime, 1000);
-        </script>
-      </div>
-      <div class="footer-links">
-        <a href="mailto:hello@ntns.me" target="_blank">Email</a>
-        <a href="resume\Nathan_Garcia_Resume_2024.pdf" target="_blank">Resume</a>
-        <a href="https://www.linkedin.com/in/ntns/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/ntgarcia" target="_blank">Github</a>
-      </div>
-    </div>
-
   </body>
 </html>
