@@ -49,13 +49,13 @@ body {
   border-radius: 1ch;
   display: flex;
   flex: 1;
-  flex-basis: 40%;
+  flex-basis: 50%;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .nav a {
-  margin: 0 6px;
+  margin: 0 4px;
 }
 
 .contact {
