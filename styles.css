@@ -8,7 +8,7 @@ body {
   background-color: gainsboro;
   color: blue;
   margin-top: 8vh;
-  max-width: 40em;
+  max-width: 24em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2em;
@@ -25,6 +25,26 @@ body {
     opacity: 1;
     transform: translate(0px);
   }
+}
+
+.box {
+  outline-style: solid;
+  outline-offset: -2px;
+  padding: 2ch;
+  border-radius: 1ch;
+  text-align: justify;
+}
+
+.footer {
+  outline-style: dashed;
+  outline-offset: -1px;
+  outline-color: blue;
+  padding: 2ch;
+  border-radius: 1ch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -61,13 +81,28 @@ a:hover {
 }
 
 .main:before {
-  content: "web㌁site ㏌ co㎱truction";
-  font-size: 600%;
+  content: "nt";
+  font-size: 2000%;
   position: absolute;
-  animation: spin 3s linear infinite;
+  animation: cw 20s linear infinite;
   color: whitesmoke;
-  top: 0;
-  left: 0;
+  top: -220px;
+  left: -44px;
+  z-index: -1;
+}
+
+.sub {
+  position: relative;
+}
+
+.sub:before {
+  content: "㎱";
+  font-size: 2000%;
+  position: absolute;
+  animation: ccw 20s linear infinite;
+  color: whitesmoke;
+  top: 150px;
+  left: 200px;
   z-index: -1;
 }
 
@@ -77,6 +112,40 @@ a:hover {
   }
   50% {
     transform: rotateY(90deg);
+  }
+}
+
+@keyframes cw {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ccw {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
 
@@ -106,10 +175,4 @@ a:hover {
 
 .grid-item {
   max-width: auto;
-}
-
-.links {
-  display: flexbox;
-  justify-content: space-between;
-  margin-bottom: 2rem;
 }
