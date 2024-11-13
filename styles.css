@@ -6,8 +6,8 @@ body {
   font-size: x-large;
   font-style: normal;
   background-color: gainsboro;
-  color: blue;
-  margin-top: 8vh;
+  color: black;
+  margin-top: 7vh;
   max-width: 24em;
   margin-left: auto;
   margin-right: auto;
@@ -35,6 +35,15 @@ body {
   text-align: justify;
 }
 
+.highlight {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  border-radius: 2px;
+  position: relative;
+  left: 6px;
+  margin-right: 12px;
+}
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -42,9 +51,9 @@ body {
 }
 
 .nav {
-  outline-style: solid;
+  outline-style: dashed;
   outline-offset: -1px;
-  outline-color: blue;
+  outline-color: black;
   padding: 2ch;
   border-radius: 1ch;
   display: flex;
@@ -61,7 +70,7 @@ body {
 .contact {
   outline-style: solid;
   outline-offset: -1px;
-  outline-color: blue;
+  outline-color: black;
   background-color: blue;
   padding: 2ch;
   border-radius: 1ch;
@@ -91,7 +100,7 @@ body {
 a {
   text-decoration: underline;
   transition: 0.3s;
-  color: blue;
+  color: black;
 }
 
 a:hover {
