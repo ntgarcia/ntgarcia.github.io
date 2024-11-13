@@ -66,6 +66,7 @@ ul {
   outline-width: 2px;
   padding: 2ch;
   border-radius: 1ch;
+  border: 3px solid;
 }
 
 .big-back {
@@ -478,6 +479,7 @@ a:hover {
   .box {
     outline-offset: -2px;
     outline-width: 3px;
+    border: 4px solid;
   }
   .nav {
     outline-offset: -2px;
