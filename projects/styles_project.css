@@ -58,7 +58,7 @@ body {
   border-radius: 1ch;
   display: flex;
   flex: 1;
-  flex-basis: 50%;
+  flex-basis: 60%;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -109,48 +109,227 @@ a:hover {
   background-color: none;
 }
 
-.main {
+.yeno-main,
+.yeno-mid,
+.yeno-sub,
+.data-main,
+.data-mid,
+.data-sub,
+.cail-main,
+.cail-mid,
+.cail-sub,
+.graphic-main,
+.graphic-mid,
+.graphic-sub,
+.exp-main,
+.exp-mid,
+.exp-sub,
+.about-main,
+.about-mid,
+.about-sub {
   position: relative;
 }
 
-.main:before {
-  content: "nt";
+.yeno-main:before {
+  content: "ye";
+  font-size: 1000%;
+  position: absolute;
+  animation: cw 20s linear infinite;
+  color: whitesmoke;
+  top: 100px;
+  left: -10px;
+  z-index: -1;
+}
+
+.yeno-mid:before {
+  content: "no";
+  font-size: 1000%;
+  position: absolute;
+  animation: ccw 20s linear infinite;
+  color: whitesmoke;
+  top: 250px;
+  left: 80px;
+  z-index: -1;
+}
+
+.yeno-sub:before {
+  content: "⑴";
   font-size: 1000%;
   position: absolute;
   animation: cw 20s linear infinite;
   color: whitesmoke;
   top: -200px;
-  left: -10px;
+  left: 100px;
   z-index: -1;
+  max-width: 100vw;
 }
 
-.mid {
-  position: relative;
-}
-
-.mid:before {
-  content: "㎱";
-  font-size: 1000%;
-  position: absolute;
-  animation: ccw 20s linear infinite;
-  color: whitesmoke;
-  top: -50px;
-  left: 70px;
-  z-index: -1;
-}
-
-.sub {
-  position: relative;
-}
-
-.sub:before {
-  content: "me";
+.data-main:before {
+  content: "da";
   font-size: 1000%;
   position: absolute;
   animation: cw 20s linear infinite;
   color: whitesmoke;
-  top: 200px;
-  left: 20px;
+  top: 100px;
+  left: -10px;
+  z-index: -1;
+}
+
+.data-mid:before {
+  content: "ta";
+  font-size: 1000%;
+  position: absolute;
+  animation: ccw 20s linear infinite;
+  color: whitesmoke;
+  top: 250px;
+  left: 80px;
+  z-index: -1;
+}
+
+.data-sub:before {
+  content: "⑵";
+  font-size: 1000%;
+  position: absolute;
+  animation: cw 20s linear infinite;
+  color: whitesmoke;
+  top: -200px;
+  left: 100px;
+  z-index: -1;
+  max-width: 100vw;
+}
+
+.cail-main:before {
+  content: "ca";
+  font-size: 1000%;
+  position: absolute;
+  animation: cw 20s linear infinite;
+  color: whitesmoke;
+  top: 100px;
+  left: -10px;
+  z-index: -1;
+}
+
+.cail-mid:before {
+  content: "il";
+  font-size: 1000%;
+  position: absolute;
+  animation: ccw 20s linear infinite;
+  color: whitesmoke;
+  top: 250px;
+  left: 80px;
+  z-index: -1;
+}
+
+.cail-sub:before {
+  content: "⑶";
+  font-size: 1000%;
+  position: absolute;
+  animation: cw 20s linear infinite;
+  color: whitesmoke;
+  top: -200px;
+  left: 100px;
+  z-index: -1;
+  max-width: 100vw;
+}
+
+.graphic-main:before {
+  content: "ds";
+  font-size: 1000%;
+  position: absolute;
+  animation: cw 20s linear infinite;
+  color: whitesmoke;
+  top: 100px;
+  left: -10px;
+  z-index: -1;
+}
+
+.graphic-mid:before {
+  content: "gn";
+  font-size: 1000%;
+  position: absolute;
+  animation: ccw 20s linear infinite;
+  color: whitesmoke;
+  top: 250px;
+  left: 80px;
+  z-index: -1;
+}
+
+.graphic-sub:before {
+  content: "⑷";
+  font-size: 1000%;
+  position: absolute;
+  animation: cw 20s linear infinite;
+  color: whitesmoke;
+  top: -200px;
+  left: 100px;
+  z-index: -1;
+  max-width: 100vw;
+}
+
+.exp-main:before {
+  content: "ex";
+  font-size: 1000%;
+  position: absolute;
+  animation: cw 20s linear infinite;
+  color: whitesmoke;
+  top: 100px;
+  left: -10px;
+  z-index: -1;
+}
+
+.exp-mid:before {
+  content: "id";
+  font-size: 1000%;
+  position: absolute;
+  animation: ccw 20s linear infinite;
+  color: whitesmoke;
+  top: 250px;
+  left: 80px;
+  z-index: -1;
+}
+
+.exp-sub:before {
+  content: "⑸";
+  font-size: 1000%;
+  position: absolute;
+  animation: cw 20s linear infinite;
+  color: whitesmoke;
+  top: -200px;
+  left: 100px;
+  z-index: -1;
+  max-width: 100vw;
+}
+
+.about-main:before {
+  content: "abt";
+  font-size: 1000%;
+  position: absolute;
+  animation: cw 20s linear infinite;
+  color: gainsboro;
+  top: 100px;
+  left: -10px;
+  z-index: -1;
+}
+
+.about-mid:before {
+  content: "me";
+  font-size: 1000%;
+  position: absolute;
+  animation: ccw 20s linear infinite;
+  color: gainsboro;
+  top: 250px;
+  left: 80px;
+  z-index: -1;
+}
+
+.about-sub:before {
+  content: "⑹";
+  font-size: 1000%;
+  position: absolute;
+  animation: cw 20s linear infinite;
+  color: gainsboro;
+  top: -200px;
+  left: 100px;
   z-index: -1;
   max-width: 100vw;
 }
