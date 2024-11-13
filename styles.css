@@ -8,7 +8,7 @@ body {
   background-color: gainsboro;
   color: black;
   margin-top: 6vh;
-  max-width: fit-content;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.7em;
@@ -151,8 +151,9 @@ a:hover {
   animation: cw 20s linear infinite;
   color: whitesmoke;
   top: 200px;
-  left: 200px;
+  left: 20px;
   z-index: -1;
+  max-width: 100vw;
 }
 
 @keyframes spin {
