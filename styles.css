@@ -1,3 +1,12 @@
+/* inter-tight-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/inter-tight-v7-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 body {
   font-family: "Inter Tight", sans-serif;
   font-optical-sizing: auto;
@@ -25,12 +34,52 @@ body {
   }
 }
 
+h1 {
+  display: block;
+  font-size: large;
+  margin-top: 0;
+  margin-bottom: -14px;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  margin-top: 1.5ch;
+  background-color: whitesmoke;
+  border-radius: 0.5ch;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+.grid-container {
+  display: flexbox;
+  columns: 2;
+}
+
 .box {
   outline-style: solid;
   outline-offset: -1px;
   outline-width: 2px;
   padding: 2ch;
   border-radius: 1ch;
+}
+
+.big-back {
+  outline-style: solid;
+  outline-offset: -1px;
+  outline-width: 2px;
+  padding: 2ch;
+  border-radius: 1ch;
+  background-color: black;
+  text-align: center;
+}
+
+.big-back a {
+  color: whitesmoke;
 }
 
 .highlight {
@@ -239,7 +288,7 @@ a:hover {
   font-size: 1000%;
   position: absolute;
   animation: cw 20s linear infinite;
-  color: whitesmoke;
+  color: lightblue;
   top: 100px;
   left: -10px;
   z-index: -1;
@@ -250,7 +299,7 @@ a:hover {
   font-size: 1000%;
   position: absolute;
   animation: ccw 20s linear infinite;
-  color: whitesmoke;
+  color: lightblue;
   top: 250px;
   left: 80px;
   z-index: -1;
@@ -261,7 +310,7 @@ a:hover {
   font-size: 1000%;
   position: absolute;
   animation: cw 20s linear infinite;
-  color: whitesmoke;
+  color: lightblue;
   top: -200px;
   left: 100px;
   z-index: -1;
@@ -419,6 +468,12 @@ a:hover {
     font-size: x-large;
     padding-left: 1em;
     padding-right: 1em;
+  }
+  h1 {
+    font-size: x-large;
+  }
+  .grid-container {
+    columns: 3;
   }
   .box {
     outline-offset: -2px;
