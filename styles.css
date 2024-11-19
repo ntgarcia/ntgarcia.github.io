@@ -304,7 +304,7 @@ a:hover {
 }
 
 .data-main:before {
-  content: "da";
+  content: "lyr";
   font-size: 1000%;
   position: absolute;
   animation: cw 20s linear infinite;
@@ -315,7 +315,7 @@ a:hover {
 }
 
 .data-mid:before {
-  content: "ta";
+  content: "ics";
   font-size: 1000%;
   position: absolute;
   animation: ccw 20s linear infinite;
