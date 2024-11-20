@@ -214,9 +214,9 @@ a:hover {
 .main,
 .mid,
 .sub,
-.yeno-main,
-.yeno-mid,
-.yeno-sub,
+.newyyc-main,
+.newyyc-mid,
+.newyyc-sub,
 .data-main,
 .data-mid,
 .data-sub,
@@ -269,8 +269,8 @@ a:hover {
   max-width: 100vw;
 }
 
-.yeno-main:before {
-  content: "ye";
+.newyyc-main:before {
+  content: "new";
   font-size: 1000%;
   position: absolute;
   animation: cw 20s linear infinite;
@@ -280,8 +280,8 @@ a:hover {
   z-index: -1;
 }
 
-.yeno-mid:before {
-  content: "no";
+.newyyc-mid:before {
+  content: "yyc";
   font-size: 1000%;
   position: absolute;
   animation: ccw 20s linear infinite;
@@ -291,7 +291,7 @@ a:hover {
   z-index: -1;
 }
 
-.yeno-sub:before {
+.newyyc-sub:before {
   content: "⑴";
   font-size: 1000%;
   position: absolute;
@@ -342,7 +342,7 @@ a:hover {
   font-size: 1000%;
   position: absolute;
   animation: cw 20s linear infinite;
-  color: lightblue;
+  color: whitesmoke;
   top: 100px;
   left: -10px;
   z-index: -1;
@@ -353,7 +353,7 @@ a:hover {
   font-size: 1000%;
   position: absolute;
   animation: ccw 20s linear infinite;
-  color: lightblue;
+  color: whitesmoke;
   top: 250px;
   left: 80px;
   z-index: -1;
