@@ -3,102 +3,692 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Nathan Garcia</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Geist", serif;
+        font-size: x-large;
+        text-transform: none;
+        font-weight: 600;
+        letter-spacing: -1px;
+        line-height: 100%;
+      }
+
+      body {
+        display: flex;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        text-align: justify;
+      }
+
+      .navbar {
+        background-color: white;
+        color: black;
+        width: 40%;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        font-size: 18px;
+      }
+
+      .navbar a {
+        color: black;
+        margin-bottom: 10px;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+      }
+
+      .navbar a:hover {
+        text-decoration-style: dotted;
+      }
+
+      .content {
+        width: 60%;
+        padding: 20px;
+        padding-right: 5%;
+        background-color: white;
+        color: black;
+        overflow-y: auto;
+      }
+
+      .content a {
+        color: black;
+        text-decoration-thickness: 3px;
+      }
+
+      .content a:hover {
+        text-decoration-style: dotted;
+      }
+
+      .content > div {
+        display: none;
+      }
+
+      .content > div.active {
+        display: block;
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 20px 0;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        background: #f0f0f0;
+        border-radius: 12px;
+      }
+    </style>
   </head>
-  <body style="background-color: gainsboro">
-    <div class="box" style="text-align: justify; border-color: whitesmoke">
-      <a href="/">Nathan Garcia</a> is a designer ⁄ programmer ⁄ artist based in
-      Calgary, AB. He is currently pursuing a Bachelor of Computer Information
-      Systems @ Mount Royal University. Here is some of his work
-      <span style="font-weight: bolder">↯</span>
-    </div>
-    <div class="main"></div>
-    <div class="mid"></div>
-    <div class="sub"></div>
-    <div class="box" style="border-color: whitesmoke">
-      <a
-        href="projects/newyyc.html"
-        class="highlight"
-        style="
-          background: lightcoral;
-          padding-left: 0.2em;
-          padding-right: 0.2em;
-        "
-        >⑴ Usability Day: NewYYC</a
+  <body>
+    <div class="navbar">
+      <h1 style="padding-bottom: 6px">
+        <a href="#" data-content="home">Nathan Garcia</a>
+        📔🍎🏆🏠🎨🌃
+      </h1>
+      <p>
+        is a designer ⁄ programmer ⁄ artist based in Calgary, AB. He is
+        currently pursuing a Bachelor of Computer Information Systems @ Mount
+        Royal University. Here is some of his work ↯
+      </p>
+      <br />
+      <a href="#" data-content="newyyc"
+        ><span style="background-color: red">01 NewYYC</span></a
       >
-      ⚠️
-    </div>
-    <div class="box" style="border-color: whitesmoke">
-      <a
-        href="projects/lyrics.html"
-        class="highlight"
-        style="
-          background: chartreuse;
-          padding-left: 0.2em;
-          padding-right: 0.2em;
-        "
-        >⑵ Data Analysis: Do I Care About Lyrics?</a
+      <a href="#" data-content="lyric"
+        ><span style="background-color: lime">02 Lyrical Data</span></a
       >
-    </div>
-    <div class="box" style="border-color: whitesmoke">
-      <a
-        href="projects/cail.html"
-        class="highlight"
-        style="
-          background: lightskyblue;
-          padding-left: 0.2em;
-          padding-right: 0.2em;
-        "
-        >⑶ Canadian Alliance for Intergenerational Living</a
+      <a href="#" data-content="cail"
+        ><span style="background-color: aqua">03 CAIL</span></a
       >
-    </div>
-    <div class="box" style="border-color: whitesmoke">
-      <a
-        class="highlight"
-        style="background: orange; padding-left: 0.2em; padding-right: 0.2em"
-        >⑷███ █ ████</a
+      <a href="#" data-content="osu"
+        ><span style="background-color: fuchsia">04 osu!</span></a
       >
-      ⚠️
-    </div>
-    <div class="box" style="border-color: whitesmoke">
-      <a
-        class="highlight"
-        style="
-          background: aquamarine;
-          padding-left: 0.2em;
-          padding-right: 0.2em;
-        "
-        >⑸ ███</a
+      <a href="#" data-content="oshi"
+        ><span style="background-color: orange">05 Oshi Oasis</span></a
       >
-      ⚠️
-    </div>
-    <div class="box" style="border-color: whitesmoke">
-      <a
-        href="projects/about.html"
-        class="highlight"
-        style="
-          background: whitesmoke;
-          padding-left: 0.2em;
-          padding-right: 0.2em;
-        "
-        >⑹ About Me</a
+      <a href="#" data-content="bolder"
+        ><span style="background-color: gray">06 Bolder Climbing</span></a
       >
+      <a href="#" data-content="design"
+        ><span style="background-color: yellow">07 Freelance Design</span></a
+      >
+      <br />
+      <a href="#" data-content="about">About</a>
+      <a
+        href="https://drive.google.com/file/d/1s5mYacQVzQxPFSMy6_6XFY8brea_-S9x/view?usp=sharing"
+        >Resume</a
+      >
+      <a href="https://www.linkedin.com/in/ntns/">LinkedIn</a>
+      <a href="https://github.com/ntgarcia">GitHub</a>
+      <a href="mailto:hello@ntns.me">Email</a>
+      <br />
+      <p>:]</p>
     </div>
 
-    <div class="navbar">
-      <div class="nav">
-        <a href="resume\Nathan_Garcia_Resume_2024.pdf" target="_blank"
-          >Resume</a
-        >
-        <a href="https://www.linkedin.com/in/ntns/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/ntgarcia" target="_blank">Github</a>
+    <div class="content">
+      <div id="home" class="active">
+        <div class="image-grid">
+          <img
+            src="img/newyyc/logo.png"
+            alt="NewYYC"
+            style="aspect-ratio: 1/1"
+          />
+          <img
+            src="img/cail/cail-preview.png"
+            alt="Preview"
+            style="aspect-ratio: 1/1"
+          />
+          <img
+            src="img/osu/preview.png"
+            alt="Mousepad"
+            style="aspect-ratio: 1/1"
+          />
+          <img
+            src="img/bolder/beats.png"
+            alt="beats"
+            style="aspect-ratio: 1/1"
+          />
+        </div>
       </div>
-      <div class="contact">
-        <a href="mailto:hello@ntns.me">say hi</a>
+      <div id="newyyc">
+        <h1>P01 -> NewYYC</h1>
+        <br />
+        <h1><span style="background-color: red">01 Intro</span></h1>
+        <p>--</p>
+        <p>
+          On Nov. 14 2024 I attended the World Usability Day Design Jam hosted
+          by Calgary UX at Mount Royal University. It was an awesome night where
+          we had an hour to quickly devise and wireframe a product that fits the
+          theme of World Usability Day 2024!
+        </p>
+        <br />
+        <p>
+          My group ended up winning first place based on our wireframes, ending
+          the event with some prizes and a great experience :]
+        </p>
+        <br />
+        <img
+          src="img/newyyc/winners.png"
+          alt="winners"
+          style="aspect-ratio: 5/4"
+        />
+        <br />
+        <br />
+        <h1><span style="background-color: red">02 Concept</span></h1>
+        <p>--</p>
+        <p>
+          The theme of World Usability Day 2024 was ensuring that all voices,
+          especially those from underrepresented groups, are included in and can
+          meaningfully participate in civic discussions.
+        </p>
+        <br />
+        <img src="img/newyyc/wireframes.png" alt="wireframes" />
+        <br />
+        <br />
+        <p>
+          Our group decided to wireframe an easy to use website that allows
+          newcomers in Calgary to streamline their experience in finding events
+          and resources near them to better integrate them into what's happening
+          in the city.
+          <br />
+          <br />
+          I honestly ended up feeling really confident about our product, even
+          moreso after winning that I decided to use my weekend after to
+          actually build the project into fruition.
+        </p>
+        <br />
+        <h1><span style="background-color: red">03 Designing</span></h1>
+        <p>--</p>
+        <p>
+          Using our already fantastic wireframes, I had a super easy time
+          designing it in Figma.
+        </p>
+        <br />
+        <img src="img/newyyc/figma.png" alt="Figma" />
+        <br />
+        <br />
+        <p>
+          I decided to name the project NewYYC, one because it's clear and
+          concise about what the website entails, and another is because I had a
+          really neat idea for the logo, wrapping YYC around itself.
+        </p>
+        <br />
+        <img src="img/newyyc/logo.png" alt="Logo" />
+        <br />
+        <br />
+        <p>
+          A disproportionate amount of my time was spent designing a map of
+          Calgary dividing its quadrants, it felt like a great experience for me
+          trying different approaches on the design and implementing it in code.
+        </p>
+        <br />
+        <img src="img/newyyc/map.png" alt="Map" />
+        <br />
+        <br />
+        <h1><span style="background-color: red">04 Coding</span></h1>
+        <p>--</p>
+        <p>
+          With everything designed in Figma, the final step was building the
+          actual app. I ended up using Vercel to build and deploy the project,
+          using the standard React Framework.
+          <br />
+          <br />
+          Since I was pressed on time as I constrained myself for the project's
+          start and finish to be within the weekend, I ended up trying and using
+          Cursor for the first time to get the project built as fast as I can.
+          It ended up being really intuitive to use and gave me a strong
+          foundation to work off of in order to get the look and feel of the
+          website just how I wanted it.
+        </p>
+        <br />
+        <img src="img/newyyc/cursor.png" alt="Cursor" />
+        <br />
+        <br />
+        <p>
+          For the website's results, I ended up using the City of Calgary's
+          official data and API to obtain their recreational events.
+        </p>
+        <br />
+        <img src="img/newyyc/api.png" alt="API" />
+        <br />
+        <br />
+        <h1><span style="background-color: red">05 Final Outcome</span></h1>
+        <p>--</p>
+        <p>
+          The final build of the project ended up looking amazing, and worked
+          seamlessly. I ended up learning a lot about working on a time
+          constraint, both from the design jam and the weekend project!
+        </p>
+        <br />
+        <br />
+        <div class="image-grid">
+          <img src="img/newyyc/01.png" alt="01" />
+          <img src="img/newyyc/02.png" alt="02" />
+          <img src="img/newyyc/03.png" alt="03" />
+          <img src="img/newyyc/04.png" alt="04" />
+        </div>
+      </div>
+      <div id="lyric">
+        <h1>P02 -> Lyrical Data</h1>
+        <br />
+        <h1><span style="background-color: lime">01 Background</span></h1>
+        <p>--</p>
+        <p>
+          I love listening to music. I enjoy hearing beautiful melodies,
+          exquisite sound design, and out-of-the-box production techniques that
+          make music interesting.
+          <br />
+          <br />
+          However, I find that I don't always pay attention to the lyrics.
+          Whenever I listen to music with friends, I often find that they would
+          be quick to point out a lyric in a song that may stand out, whether it
+          be good or bad.
+          <br />
+          <br />
+          My response to this would usually be me not even realizing it was in
+          the song in the first place! 🤷‍♂️ Because of this, I decided to analyze
+          my Spotify stats to see if it actually reflects my tendency to not
+          care about lyrics.
+        </p>
+        <br />
+        <h1>
+          <span style="background-color: lime"
+            >02 Fetching Top Tracks from Spotify</span
+          >
+        </h1>
+
+        <p>--</p>
+        <p>
+          I used the Spotify API to access my listening history. After signing
+          up for an API key at the
+          <a href="https://beta.developer.spotify.com/"
+            >Spotify for Developers</a
+          >
+          page, I was able to use
+          <a href="https://github.com/plamere/spotipy">Spotipy</a> to access my
+          top artists, top tracks, and metadata for each song.
+        </p>
+        <br />
+        <img src="img/lyrics/spotipy.png" alt="spotipy" />
+        <br />
+        <br />
+        <p>
+          Top tracks are stored in three separate ranges, short-term (4 weeks),
+          medium-term (6 months), and long-term (all-time).
+        </p>
+        <br />
+        <img src="img/lyrics/csv.png" alt="csv" />
+        <br />
+        <br />
+        <p>
+          I decided to store all of this data in a .csv file so that my main
+          comparison for data analysis would be between the time ranges.
+        </p>
+        <br />
+        <img src="img/lyrics/toptracks.png" alt="toptracks" />
+        <br />
+        <br />
+        <h1>
+          <span style="background-color: lime"
+            >03 Fetching Lyrics from Genius</span
+          >
+        </h1>
+        <p>--</p>
+        <p>
+          Now that I have all of my top tracks, I need to fetch the lyrics of
+          each song. I decided to use
+          <a href="https://lyricsgenius.readthedocs.io/en/master/"
+            >LyricsGenius</a
+          >
+          for this, as I can easily match the metadata from the .csv file to
+          quickly obtain all of the lyrics.
+        </p>
+        <br />
+        <img src="img/lyrics/json.png" alt="json" />
+        <br />
+        <br />
+        <p>
+          Just like Spotipy, all I needed to do was sign up for an API key. From
+          there, I was able to save all of the lyrics in a .json file.
+        </p>
+        <br />
+        <img src="img/lyrics/metadata.png" alt="metadata" />
+        <br />
+        <br />
+        <h1>
+          <span style="background-color: lime">04 Lyric Analysis</span>
+        </h1>
+        <p>--</p>
+        <p>
+          Scraping Spotify and Genius was the easy part; now comes the lyric
+          analysis. My main three metrics to decipher if I care about lyrics or
+          not were:
+          <br />
+          <br />
+          Q01: How much of what I listen to is just repeated / barebones lyrics?
+          (Line Repetition)
+          <br />
+          Q02: How much of what I listen to contains complex verses? (Verse
+          complexity)
+          <br />
+          Q03: How much of what I listen to contains unique words? (Word
+          diversity)
+        </p>
+        <br />
+        <img src="img/lyrics/metrics.png" alt="metrics" />
+        <br />
+        <br />
+        <p>
+          A01: Lyric repetition was calculated by splitting the lyrics into
+          lines and simply counting if the lines were repeating.
+          <br />A02: Complex verses were analyzed in each song by counting how
+          many unique verses exist. <br />A03: Unique words were calculated by
+          finding the ratio of how many times a word appears and comparing it to
+          the all of the words.
+        </p>
+        <br />
+        <h1>
+          <span style="background-color: lime">05 Data Visualisation</span>
+        </h1>
+        <p>--</p>
+        <p>
+          Now that the lyrics were analyzed, it's time to visualise the data. I
+          mainly used Matplotlib to visualise the data, opting to maximise
+          readability by creating bar charts for each listening range. I even
+          decided to display metric interpretations depending on how each range
+          compares to each other.
+        </p>
+        <br />
+        <img src="../img/lyrics/interpret.png" alt="interpret" />
+        <br />
+        <br />
+        <h1>
+          <span style="background-color: lime">06 Analysis Results</span>
+        </h1>
+        <p>--</p>
+        <p>
+          With everything setup, it was finally time to display the data! All I
+          had to do was run my python program to analyze the lyrics. The output
+          was three graphs generated by Matplotlib, and the results ended up
+          surprising me...
+        </p>
+        <br />
+        <img src="../img/lyrics/results.png" alt="results" /> <br />
+        <br />
+        <p>
+          Comparing my overall top tracks with my recent top tracks, I can see
+          that my overall listening habits have gravitated towards my
+          subconscious caring for lyrics. I've been listening to less repetitive
+          and more complex songs, albeit with a lot less vocabulary diversity,
+          which is what surprised me most.
+        </p>
+        <br />
+        <h1>
+          <span style="background-color: lime">07 Experience and Findings</span>
+        </h1>
+        <p>--</p>
+        <p>
+          This project was a fun way for me to combine my passion of music along
+          with coding and data visualisation in order to try and find
+          introspective answers to how my listening to music has changed over
+          time.
+          <br />
+          <br />
+          I learned a lot about using different API's in conjunction with each
+          other along with file creation between them. Furthermore, I learned
+          even more about how to analyse and visualise data to align it with my
+          own criteria and present it in a way that is easy to understand
+          <br />
+          <br />
+          Moving forward, I'd like to try and refine my methods of analysing
+          data in comparison with a set criteria. I'd also like to explore more
+          ways in improving how I can visualise data, specifically with more
+          eye-catching models and interactivity.
+        </p>
+        <br />
+      </div>
+      <div id="cail">
+        <h1>P03 -> CAIL</h1>
+        <br />
+        <h1><span style="background-color: aqua">01 Intro</span></h1>
+        <p>--</p>
+        <p>
+          For my 2023 Capstone Project, my group worked closely with the
+          Canadian Alliance for Intergenerational Living to create an essential
+          task tracker web app so that the organization can monitor student
+          progress.
+        </p>
+        <br />
+        <h1><span style="background-color: aqua">02 Problem</span></h1>
+        <p>--</p>
+        <p>
+          The organization allows affordable housing to students in exchange for
+          spending time with seniors. In order to accurately log these tasks,
+          they needed an app that can be used by both the organization and
+          students.
+        </p>
+        <br />
+        <h1><span style="background-color: aqua">03 Solution</span></h1>
+        <p>--</p>
+        <p>
+          A lightweight, flexible web app that enables students to easily create
+          tasks and log their monthly progress, in addition to allowing admins
+          to easily manage and track student data at a glance.
+        </p>
+        <br />
+        <img src="..\img\cail\cail-preview.png" alt="Solution" />
+        <br />
+        <br />
+        <h1><span style="background-color: aqua">04 Research Methods</span></h1>
+        <p>--</p>
+        <p>
+          We met with Silvera, the company working with CAIL to house and work
+          directly with the students, in order to acquire all of their
+          requirements for what our web app should provide. In general, Silvera
+          wanted the app to be as hands off as possible with an emphasis on ease
+          of use and accessibility.
+          <br />
+          <br />
+          Students should be using the app solely to mark what tasks they have
+          done and to track what they need to do, and both CAIL and Silvera will
+          only use the app to collect the task data and lightly manage users.
+        </p>
+        <br />
+        <img src="..\img\cail\research.png" alt="Research" /> <br />
+        <br />
+        <h1>
+          <span style="background-color: aqua">05 High Level Requirements</span>
+        </h1>
+        <p>--</p>
+        <p>
+          We divided our requirements based on use case and view, with the app
+          being split on Student Use Case and Admin Use Case:
+          <br /><br />
+          Student: <br />
+          01 Task Creation, Management and Tracking <br />
+          02 Calendar Functionality <br />
+          03 Hour tracking <br />
+          <br />
+          Admin: <br />
+          01 Creation and Management of Student Information <br />
+          02 Data Retrieval for Reporting <br />
+          03 Banked Hours Tracking <br />
+        </p>
+        <br />
+        <img src="..\img\cail\req.png" alt="Requirements" /> <br />
+        <br />
+        <h1>
+          <span style="background-color: aqua">06 Evaluation and Testing</span>
+        </h1>
+        <p>--</p>
+        <p>
+          Upon contact with CAIL we established client check-ins every 2 weeks,
+          with most of testing done internally until March where we had our
+          clients test the app as both student and admin.
+          <br />
+          <br />
+          The continuous client check-ins helped us stay focused on what needs
+          to be done on a bi-weekly basis. Client testing was integral in
+          allowing us to add in additional tweaks and changes that greatly
+          improved the app for student and admin use.
+        </p>
+        <br />
+        <h1>
+          <span style="background-color: aqua">07 Final Outcome</span>
+        </h1>
+        <p>--</p>
+        <p>
+          By the end of the semester we were able to successfully integrate all
+          requirements and evaluations to create the desired webapp for the
+          client. The tools used to create the webapp included Figma for the
+          UI/UX and wireframing, MongoDB to handle the backend, and a frontend
+          tech stack including Vercel, React, NextJS, and TailwindCSS.
+        </p>
+        <br />
+        <div class="image-grid">
+          <img src="..\img\cail\login.png" alt="login" />
+          <img src="..\img\cail\login.png" alt="login" />
+          <img src="..\img\cail\user_task.png" alt="create task" />
+          <img src="..\img\cail\admin_home.png" alt="admin home" />
+          <img src="..\img\cail\admin_user.png" alt="create user" />
+          <img src="..\img\cail\admin_profile.png" alt="profile page" />
+        </div>
+        <br />
+        <br />
+        <h1>
+          <span style="background-color: aqua">08 Future Work</span>
+        </h1>
+        <p>--</p>
+        <p>
+          Upon the completion and presentation of this Capstone Project, CAIL
+          notified us that they would be integrating the app within the
+          organization by the end of the summer. It would be launched as the
+          students start their Fall Semester, with additional student testing
+          done beforehand.
+          <br />
+          <br />
+          Short term goals for the webapp that would be completed before full
+          launch will include:
+          <br />
+          <br />
+          01 Transfer of deployment and build of app across platforms if needed
+          <br />
+          02 Accessibility improvements such as localization and screen reader
+          optimization
+          <br />
+          03 Outlook integration, allowing for email notifications
+        </p>
+      </div>
+      <div id="osu">
+        <h1>P04 -> osu!</h1>
+        <br />
+        <h1><span style="background-color: fuchsia">01 Mousepad</span></h1>
+        <p>--</p>
+        <p>
+          I was commissioned by the awesome people on osu! to design a mousepad
+          design that would be sold on limited time on their online store.
+        </p>
+        <br />
+        <img src="img/osu/mousepad.png" alt="mousepad" />
+        <br />
+        <br />
+        <img src="img/osu/storepage.png" alt="storepage" />
+        <br />
+        <br />
+        <p>
+          They even sent me the mousepad for free! I really love how it ended up
+          looking physically :]
+        </p>
+        <br />
+        <img src="img/osu/physical.png" alt="physical" />
+        <br />
+        <br />
+        <h1><span style="background-color: fuchsia">02 [REDACTED]</span></h1>
+        <p>--</p>
+        <p>Coming soon! 👕</p>
+        <br />
+        <h1><span style="background-color: fuchsia">03 [REDACTED]</span></h1>
+        <p>--</p>
+        <p>Coming soon! 🖱️</p>
+      </div>
+      <div id="oshi">Coming soon! :]</div>
+      <div id="bolder">Coming soon! :]</div>
+      <div id="design">Coming soon! :]</div>
+      <div id="about">
+        <h1>About Me</h1>
+        <p>--</p>
+        <p>
+          Nathan Garcia (b. 2000, Quezon City) is a designer ⁄ programmer ⁄
+          artist with a passion for combining function with creativity to craft
+          digital experiences. When he's not immersed in programming or
+          designing, you can find him thrifting, DJing, or in the climbing gym
+          sending his projects.
+        </p>
+        <br />
+        <img src="img/him.png" alt="placeholder" style="aspect-ratio: 4/3" />
+        <br />
+        <br />
+        <p>
+          Currently, he is pursuing his Bachelor of Computer Information Systems
+          at Mount Royal University. He can be contacted at hello@ntns.me, found
+          on
+          <a href="https://www.linkedin.com/in/ntns/" target="_blank"
+            >LinkedIn</a
+          >
+          , and on
+          <a href="https://github.com/ntgarcia" target="_blank"> Github.</a> A
+          copy of his resume can be found
+          <a
+            href="https://drive.google.com/file/d/1s5mYacQVzQxPFSMy6_6XFY8brea_-S9x/view?usp=sharing"
+            >here.</a
+          >
+        </p>
+        <br />
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/32bEiqvZCzVwJb0Ln9ONSQ?utm_source=generator"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
+
+    <script>
+      const links = document.querySelectorAll(".navbar a");
+      const sections = document.querySelectorAll(".content > div");
+
+      links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = link.getAttribute("data-content");
+
+          sections.forEach((section) => {
+            section.classList.remove("active");
+          });
+
+          document.getElementById(target).classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>
