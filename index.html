@@ -12,7 +12,8 @@
     />
     <style>
       * {
-        margin: 0;
+        margin: auto;
+        max-width: 1000px;
         padding: 0;
         box-sizing: border-box;
         font-family: "Geist", serif;
@@ -33,12 +34,10 @@
       .navbar {
         background-color: white;
         color: black;
-        width: 40%;
+        max-width: 35%;
         position: sticky;
         top: 0;
         height: 100vh;
-        display: flex;
-        flex-direction: column;
         padding: 20px;
         font-size: 18px;
       }
@@ -55,12 +54,11 @@
       }
 
       .content {
-        width: 60%;
+        width: auto;
         padding: 20px;
         padding-right: 5%;
         background-color: white;
         color: black;
-        overflow-y: auto;
       }
 
       .content a {
@@ -84,14 +82,40 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        margin: 20px 0;
       }
 
       img {
-        width: 100%;
+        max-width: 100%;
         object-fit: cover;
         background: #f0f0f0;
         border-radius: 12px;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        float: right;
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          display: none;
+        }
+
+        .content {
+          width: 100%;
+          padding: 0 20px;
+        }
+
+        #topbar {
+          display: block;
+          background-color: white;
+          color: black;
+          position: sticky;
+          top: 0;
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
       }
     </style>
   </head>
@@ -99,7 +123,6 @@
     <div class="navbar">
       <h1 style="padding-bottom: 6px">
         <a href="#" data-content="home">Nathan Garcia</a>
-        📔🍎🏆🏠🎨🌃
       </h1>
       <p>
         is a designer ⁄ programmer ⁄ artist based in Calgary, AB. He is
@@ -110,40 +133,83 @@
       <a href="#" data-content="newyyc"
         ><span style="background-color: red">01 NewYYC</span></a
       >
+      <br />
+      <br />
       <a href="#" data-content="lyric"
         ><span style="background-color: lime">02 Lyrical Data</span></a
       >
+      <br />
+      <br />
       <a href="#" data-content="cail"
         ><span style="background-color: aqua">03 CAIL</span></a
       >
+      <br />
+      <br />
       <a href="#" data-content="osu"
         ><span style="background-color: fuchsia">04 osu!</span></a
       >
+      <br />
+      <br />
       <a href="#" data-content="oshi"
         ><span style="background-color: orange">05 Oshi Oasis</span></a
       >
+      <br />
+      <br />
       <a href="#" data-content="bolder"
         ><span style="background-color: gray">06 Bolder Climbing</span></a
       >
+      <br />
+      <br />
       <a href="#" data-content="design"
         ><span style="background-color: yellow">07 Freelance Design</span></a
       >
       <br />
-      <a href="#" data-content="about">About</a>
-      <a
-        href="https://drive.google.com/file/d/1s5mYacQVzQxPFSMy6_6XFY8brea_-S9x/view?usp=sharing"
-        >Resume</a
-      >
-      <a href="https://www.linkedin.com/in/ntns/">LinkedIn</a>
-      <a href="https://github.com/ntgarcia">GitHub</a>
-      <a href="mailto:hello@ntns.me">Email</a>
       <br />
-      <p>:]</p>
+      <a href="#" data-content="about">About</a>
+      <br />
+      <br />
+      <div class="socials">
+        <a
+          href="https://drive.google.com/file/d/1s5mYacQVzQxPFSMy6_6XFY8brea_-S9x/view?usp=sharing"
+          >Resume</a
+        >
+        <br />
+        <a href="https://www.linkedin.com/in/ntns/">LinkedIn</a>
+        <br />
+        <a href="https://github.com/ntgarcia">GitHub</a>
+        <br />
+        <a href="mailto:hello@ntns.me">Email</a>
+      </div>
     </div>
 
     <div class="content">
+      <div id="topbar">
+        <a href="#" data-content="home">Nathan Garcia</a>
+        <button>☰</button>
+      </div>
+
       <div id="home" class="active">
         <div class="image-grid">
+          <img
+            src="img/newyyc/logo.png"
+            alt="NewYYC"
+            style="aspect-ratio: 1/1"
+          />
+          <img
+            src="img/cail/cail-preview.png"
+            alt="Preview"
+            style="aspect-ratio: 1/1"
+          />
+          <img
+            src="img/osu/preview.png"
+            alt="Mousepad"
+            style="aspect-ratio: 1/1"
+          />
+          <img
+            src="img/bolder/beats.png"
+            alt="beats"
+            style="aspect-ratio: 1/1"
+          />
           <img
             src="img/newyyc/logo.png"
             alt="NewYYC"
