@@ -1,0 +1,39 @@
+const mobileMenuBtn = document.querySelector("#topbar button");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeButton = document.querySelector(".close-button");
+const mobileOverlay = document.querySelector(".mobile-menu-overlay");
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu-content a");
+const allLinks = document.querySelectorAll('.navbar a, .mobile-menu-content a, #topbar a');
+const sections = document.querySelectorAll('.content > div');
+
+function toggleMenu() {
+  mobileMenu.classList.toggle("active");
+  document.body.style.overflow = mobileMenu.classList.contains("active")
+    ? "hidden"
+    : "";
+}
+
+mobileMenuBtn.addEventListener("click", toggleMenu);
+closeButton.addEventListener("click", toggleMenu);
+mobileOverlay.addEventListener("click", toggleMenu);
+
+allLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    const target = link.getAttribute("data-content");
+    
+    if (target) {
+      e.preventDefault();
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
+      
+      document.getElementById(target).classList.add("active");
+      
+      document.body.classList.toggle('home-active', target === 'home');
+      
+      if (link.closest('.mobile-menu-content')) {
+        toggleMenu();
+      }
+    }
+  });
+}); 

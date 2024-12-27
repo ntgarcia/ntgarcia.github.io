@@ -6,118 +6,9 @@
     <title>Nathan Garcia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        margin: auto;
-        max-width: 1000px;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Geist", serif;
-        font-size: x-large;
-        text-transform: none;
-        font-weight: 600;
-        letter-spacing: -1px;
-        line-height: 100%;
-      }
-
-      body {
-        display: flex;
-        font-family: Arial, sans-serif;
-        height: 100vh;
-        text-align: justify;
-      }
-
-      .navbar {
-        background-color: white;
-        color: black;
-        max-width: 35%;
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        padding: 20px;
-        font-size: 18px;
-      }
-
-      .navbar a {
-        color: black;
-        margin-bottom: 10px;
-        text-decoration: underline;
-        text-decoration-thickness: 3px;
-      }
-
-      .navbar a:hover {
-        text-decoration-style: dotted;
-      }
-
-      .content {
-        width: auto;
-        padding: 20px;
-        padding-right: 5%;
-        background-color: white;
-        color: black;
-      }
-
-      .content a {
-        color: black;
-        text-decoration-thickness: 3px;
-      }
-
-      .content a:hover {
-        text-decoration-style: dotted;
-      }
-
-      .content > div {
-        display: none;
-      }
-
-      .content > div.active {
-        display: block;
-      }
-
-      .image-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      img {
-        max-width: 100%;
-        object-fit: cover;
-        background: #f0f0f0;
-        border-radius: 12px;
-      }
-
-      button {
-        background-color: transparent;
-        border: none;
-        float: right;
-      }
-
-      @media (max-width: 768px) {
-        .navbar {
-          display: none;
-        }
-
-        .content {
-          width: 100%;
-          padding: 0 20px;
-        }
-
-        #topbar {
-          display: block;
-          background-color: white;
-          color: black;
-          position: sticky;
-          top: 0;
-          padding-top: 8px;
-          padding-bottom: 8px;
-        }
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/photostack.css" />
   </head>
   <body>
     <div class="navbar">
@@ -171,14 +62,73 @@
       <div class="socials">
         <a
           href="https://drive.google.com/file/d/1s5mYacQVzQxPFSMy6_6XFY8brea_-S9x/view?usp=sharing"
-          >Resume</a
+          target="_blank">Resume</a
         >
         <br />
-        <a href="https://www.linkedin.com/in/ntns/">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/ntns/" target="_blank">LinkedIn</a>
         <br />
-        <a href="https://github.com/ntgarcia">GitHub</a>
+        <a href="https://github.com/ntgarcia" target="_blank">GitHub</a>
         <br />
-        <a href="mailto:hello@ntns.me">Email</a>
+        <a href="mailto:hello@ntns.me" target="_blank">Email</a>
+      </div>
+    </div>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu-overlay"></div>
+      <div class="mobile-menu-content">
+        <button class="close-button">✕</button>
+
+        <br />
+        <a href="#" data-content="newyyc"
+          ><span style="background-color: red">01 NewYYC</span></a
+        >
+        <br />
+        <br />
+        <a href="#" data-content="lyric"
+          ><span style="background-color: lime">02 Lyrical Data</span></a
+        >
+        <br />
+        <br />
+        <a href="#" data-content="cail"
+          ><span style="background-color: aqua">03 CAIL</span></a
+        >
+        <br />
+        <br />
+        <a href="#" data-content="osu"
+          ><span style="background-color: fuchsia">04 osu!</span></a
+        >
+        <br />
+        <br />
+        <a href="#" data-content="oshi"
+          ><span style="background-color: orange">05 Oshi Oasis</span></a
+        >
+        <br />
+        <br />
+        <a href="#" data-content="bolder"
+          ><span style="background-color: gray">06 Bolder Climbing</span></a
+        >
+        <br />
+        <br />
+        <a href="#" data-content="design"
+          ><span style="background-color: yellow">07 Freelance Design</span></a
+        >
+        <br />
+        <br />
+        <a href="#" data-content="about">About</a>
+        <br />
+        <br />
+        <div class="socials">
+          <a
+            href="https://drive.google.com/file/d/1s5mYacQVzQxPFSMy6_6XFY8brea_-S9x/view?usp=sharing"
+            target="_blank">Resume</a
+          >
+          <br />
+          <a href="https://www.linkedin.com/in/ntns/" target="_blank">LinkedIn</a>
+          <br />
+          <a href="https://github.com/ntgarcia" target="_blank">GitHub</a>
+          <br />
+          <a href="mailto:hello@ntns.me" target="_blank">Email</a>
+        </div>
       </div>
     </div>
 
@@ -189,47 +139,20 @@
       </div>
 
       <div id="home" class="active">
-        <div class="image-grid">
-          <img
-            src="img/newyyc/logo.png"
-            alt="NewYYC"
-            style="aspect-ratio: 1/1"
-          />
-          <img
-            src="img/cail/cail-preview.png"
-            alt="Preview"
-            style="aspect-ratio: 1/1"
-          />
-          <img
-            src="img/osu/preview.png"
-            alt="Mousepad"
-            style="aspect-ratio: 1/1"
-          />
-          <img
-            src="img/bolder/beats.png"
-            alt="beats"
-            style="aspect-ratio: 1/1"
-          />
-          <img
-            src="img/newyyc/logo.png"
-            alt="NewYYC"
-            style="aspect-ratio: 1/1"
-          />
-          <img
-            src="img/cail/cail-preview.png"
-            alt="Preview"
-            style="aspect-ratio: 1/1"
-          />
-          <img
-            src="img/osu/preview.png"
-            alt="Mousepad"
-            style="aspect-ratio: 1/1"
-          />
-          <img
-            src="img/bolder/beats.png"
-            alt="beats"
-            style="aspect-ratio: 1/1"
-          />
+        <div id="intro" p>
+          is a designer ⁄ programmer ⁄ artist based in Calgary, AB. He is
+          currently pursuing a Bachelor of Computer Information Systems @ Mount
+          Royal University. Here is some of his work ↯
+        </div>
+        <div class="photo-stack">
+          <img src="img/newyyc/logo.png" alt="NewYYC" draggable="false" />
+          <img src="img/cail/cail-preview.png" alt="Preview" draggable="false" />
+          <img src="img/osu/preview.png" alt="Mousepad" draggable="false" />
+          <img src="img/bolder/beats.png" alt="beats" draggable="false" />
+          <img src="img/bolder/ladies night.png" alt="NewYYC" draggable="false" />
+          <img src="img/bolder/winter community night.png" alt="Preview" draggable="false" />
+          <img src="img/bolder/edge pricing.png" alt="Mousepad" draggable="false" />
+          <img src="img/bolder/triple threat finals.png" alt="beats" draggable="false" />
         </div>
       </div>
       <div id="newyyc">
@@ -243,7 +166,6 @@
           we had an hour to quickly devise and wireframe a product that fits the
           theme of World Usability Day 2024!
         </p>
-        <br />
         <p>
           My group ended up winning first place based on our wireframes, ending
           the event with some prizes and a great experience :]
@@ -687,7 +609,7 @@
         <br />
         <h1><span style="background-color: fuchsia">02 [REDACTED]</span></h1>
         <p>--</p>
-        <p>Coming soon! 👕</p>
+        <p>Coming soon! 🖱️</p>
         <br />
         <h1><span style="background-color: fuchsia">03 [REDACTED]</span></h1>
         <p>--</p>
@@ -739,22 +661,7 @@
       </div>
     </div>
 
-    <script>
-      const links = document.querySelectorAll(".navbar a");
-      const sections = document.querySelectorAll(".content > div");
-
-      links.forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const target = link.getAttribute("data-content");
-
-          sections.forEach((section) => {
-            section.classList.remove("active");
-          });
-
-          document.getElementById(target).classList.add("active");
-        });
-      });
-    </script>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/photostack.js"></script>
   </body>
 </html>

@@ -1,0 +1,228 @@
+/* Base styles */
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Geist", serif;
+  font-size: x-large;
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 100%;
+  scrollbar-gutter: stable;
+}
+
+html, body {
+  overflow: hidden !important;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  margin: auto;
+  max-width: 1000px;
+  font-family: Arial, sans-serif;
+  text-align: justify;
+}
+
+.navbar {
+  background-color: white;
+  color: black;
+  max-width: 35%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 20px;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.navbar a {
+  color: black;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+.navbar a:hover {
+  text-decoration-style: dotted;
+}
+
+.mobile-menu a {
+  color: black;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+.mobile-menu a:hover {
+  text-decoration-style: dotted;
+}
+
+.content {
+  width: 65%;
+  padding: 20px;
+  padding-right: 5%;
+  background-color: white;
+  color: black;
+  position: relative;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.content a {
+  color: black;
+  text-decoration-thickness: 3px;
+}
+
+.content a:hover {
+  text-decoration-style: dotted;
+}
+
+.content > div {
+  display: none;
+}
+
+.content > div.active {
+  display: block;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  background: #f0f0f0;
+  border-radius: 12px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#intro {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+    padding: 0 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  #topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    position: sticky;
+    top: 0;
+    padding: 8px 0px;
+    z-index: 100;
+  }
+
+  #intro {
+    display: flex;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 24px;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+body.home-active {
+  overflow: hidden;
+}
+
+body.home-active .content {
+  overflow: hidden;
+}
+
+#home.active {
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+body:not(.home-active) .content:not(#home) {
+  overflow: auto !important;
+} 

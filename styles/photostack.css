@@ -1,0 +1,48 @@
+.photo-stack {
+  position: fixed;
+  width: calc(65% - 40px);
+  height: 90vh;
+  overflow: visible;
+  border-radius: 24px;
+  mask-image: radial-gradient(
+    ellipse 80% 80% at center,
+    black 40%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 80% at center,
+    black 40%,
+    transparent 100%
+  );
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -50%);
+  z-index: 1;
+}
+
+.photo-stack img {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  cursor: move;
+  transition: transform 0.1s ease-out;
+  transform-origin: center;
+  user-select: none;
+}
+
+.photo-stack img.dragging {
+  z-index: 1001 !important;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .photo-stack {
+    width: calc(100% - 40px);
+    height: 80vh;
+    right: 20px;
+  }
+  
+  .photo-stack img {
+    width: 200px;
+  }
+} 
