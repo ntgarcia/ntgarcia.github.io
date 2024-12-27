@@ -47,9 +47,31 @@ class PhotoStack {
     let isDragging = false;
     let currentX, currentY, initialX, initialY;
 
+    const getPosition = (event) => {
+      // Return coordinates for both touch and mouse events
+      if (event.touches && event.touches.length > 0) {
+        return {
+          x: event.touches[0].clientX,
+          y: event.touches[0].clientY
+        };
+      }
+      return {
+        x: event.clientX,
+        y: event.clientY
+      };
+    };
+
     const dragStart = (e) => {
-      initialX = e.clientX - photo.offsetLeft;
-      initialY = e.clientY - photo.offsetTop;
+      const position = getPosition(e);
+      
+      // Get the current transform values
+      const style = window.getComputedStyle(photo);
+      const matrix = new DOMMatrix(style.transform);
+      const currentLeft = parseInt(photo.style.left) || 0;
+      const currentTop = parseInt(photo.style.top) || 0;
+
+      initialX = position.x - currentLeft;
+      initialY = position.y - currentTop;
       
       if (e.target === photo) {
         isDragging = true;
@@ -62,8 +84,10 @@ class PhotoStack {
     const drag = (e) => {
       if (isDragging) {
         e.preventDefault();
-        currentX = e.clientX - initialX;
-        currentY = e.clientY - initialY;
+        const position = getPosition(e);
+        
+        currentX = position.x - initialX;
+        currentY = position.y - initialY;
 
         const bounds = this.container.getBoundingClientRect();
         const padding = 50;
@@ -76,17 +100,25 @@ class PhotoStack {
       }
     };
 
-    const dragEnd = () => {
-      initialX = currentX;
-      initialY = currentY;
-      isDragging = false;
-      photo.classList.remove('dragging');
+    const dragEnd = (e) => {
+      if (isDragging) {
+        isDragging = false;
+        initialX = currentX;
+        initialY = currentY;
+        photo.classList.remove('dragging');
+      }
     };
 
+    // Mouse events
     photo.addEventListener('mousedown', dragStart);
-    photo.addEventListener('mousemove', drag);
-    photo.addEventListener('mouseup', dragEnd);
-    photo.addEventListener('mouseleave', dragEnd);
+    window.addEventListener('mousemove', drag);
+    window.addEventListener('mouseup', dragEnd);
+
+    // Touch events
+    photo.addEventListener('touchstart', dragStart, { passive: false });
+    window.addEventListener('touchmove', drag, { passive: false });
+    window.addEventListener('touchend', dragEnd);
+    window.addEventListener('touchcancel', dragEnd);
   }
 }
 

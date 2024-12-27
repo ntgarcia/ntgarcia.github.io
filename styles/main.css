@@ -36,7 +36,7 @@ body {
   height: 100vh;
   padding: 20px;
   font-size: 18px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .navbar a {
@@ -167,6 +167,12 @@ button {
   left: 0;
   padding: 20px;
   z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  touch-action: none;
+  user-select: none;
 }
 
 @media (max-width: 768px) {
@@ -177,6 +183,7 @@ button {
   .content {
     width: 100%;
     padding: 0 20px;
+    padding-bottom: 40px;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -190,15 +197,30 @@ button {
     color: black;
     position: sticky;
     top: 0;
-    padding: 8px 0px;
-    z-index: 100;
+    padding: 14px 0px;
+    z-index: 3;
   }
 
   #intro {
-    display: flex;
-    position: relative;
-    padding-top: 10px;
-    padding-bottom: 24px;
+    display: block;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    z-index: 2;
+    width: 100%;
+    white-space: normal;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  #intro::after {
+    display: none;
+  }
+
+  #home.active {
+    padding-top: 80px;
   }
 
   button {
@@ -225,4 +247,31 @@ body.home-active .content {
 
 body:not(.home-active) .content:not(#home) {
   overflow: auto !important;
+}
+
+/* Add these styles for the design gallery */
+.design-gallery {
+  columns: 2;
+  column-gap: 24px;
+  width: 100%;
+}
+
+.design-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 24px;
+  break-inside: avoid;
+}
+
+@media (max-width: 768px) {
+  .design-gallery {
+    columns: 1;
+    column-gap: 16px;
+  }
+  
+  .design-gallery img {
+    margin-bottom: 16px;
+  }
 } 
