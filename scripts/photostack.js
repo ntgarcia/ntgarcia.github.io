@@ -1,27 +1,27 @@
 class PhotoStack {
   constructor(container) {
     this.container = container;
-    this.photos = container.querySelectorAll('img');
-    this.highestZ = this.photos.length;
+    this.photoCards = container.querySelectorAll('.photo-card');
+    this.highestZ = this.photoCards.length;
     this.initializePhotos();
     this.handleResize = this.handleResize.bind(this);
     window.addEventListener('resize', this.handleResize);
   }
 
   initializePhotos() {
-    this.photos.forEach((photo, index) => {
-      this.positionPhoto(photo, index);
-      this.setupDragListeners(photo);
+    this.photoCards.forEach((photoCard, index) => {
+      this.positionPhoto(photoCard, index);
+      this.setupDragListeners(photoCard);
     });
   }
 
-  positionPhoto(photo, index) {
+  positionPhoto(photoCard, index) {
     const bounds = this.container.getBoundingClientRect();
     const centerX = bounds.width / 2;
     const centerY = bounds.height / 2;
     const radius = Math.min(bounds.width, bounds.height) * 0.25;
     
-    const angle = (index / this.photos.length) * 2 * Math.PI;
+    const angle = (index / this.photoCards.length) * 2 * Math.PI;
     const distance = radius * (0.6 + Math.random() * 0.4);
     
     const baseX = centerX + Math.cos(angle) * distance - 125;
@@ -31,19 +31,19 @@ class PhotoStack {
     const randomY = baseY + (Math.random() - 0.5) * 50;
     const randomRotate = Math.random() * 30 - 15;
     
-    photo.style.left = `${randomX}px`;
-    photo.style.top = `${randomY}px`;
-    photo.style.transform = `rotate(${randomRotate}deg)`;
-    photo.style.zIndex = index;
+    photoCard.style.left = `${randomX}px`;
+    photoCard.style.top = `${randomY}px`;
+    photoCard.style.transform = `rotate(${randomRotate}deg)`;
+    photoCard.style.zIndex = index;
   }
 
   handleResize() {
-    this.photos.forEach((photo, index) => {
-      this.positionPhoto(photo, index);
+    this.photoCards.forEach((photoCard, index) => {
+      this.positionPhoto(photoCard, index);
     });
   }
 
-  setupDragListeners(photo) {
+  setupDragListeners(photoCard) {
     let isDragging = false;
     let currentX, currentY, initialX, initialY;
 
@@ -65,19 +65,20 @@ class PhotoStack {
       const position = getPosition(e);
       
       // Get the current transform values
-      const style = window.getComputedStyle(photo);
+      const style = window.getComputedStyle(photoCard);
       const matrix = new DOMMatrix(style.transform);
-      const currentLeft = parseInt(photo.style.left) || 0;
-      const currentTop = parseInt(photo.style.top) || 0;
+      const currentLeft = parseInt(photoCard.style.left) || 0;
+      const currentTop = parseInt(photoCard.style.top) || 0;
 
       initialX = position.x - currentLeft;
       initialY = position.y - currentTop;
       
-      if (e.target === photo) {
+      // Check if clicked on the image or card area (not the title)
+      if (!e.target.closest('.photo-title')) {
         isDragging = true;
         this.highestZ++;
-        photo.style.zIndex = this.highestZ;
-        photo.classList.add('dragging');
+        photoCard.style.zIndex = this.highestZ;
+        photoCard.classList.add('dragging');
       }
     };
 
@@ -92,11 +93,11 @@ class PhotoStack {
         const bounds = this.container.getBoundingClientRect();
         const padding = 50;
         
-        currentX = Math.max(-padding, Math.min(bounds.width - photo.offsetWidth + padding, currentX));
-        currentY = Math.max(-padding, Math.min(bounds.height - photo.offsetHeight + padding, currentY));
+        currentX = Math.max(-padding, Math.min(bounds.width - photoCard.offsetWidth + padding, currentX));
+        currentY = Math.max(-padding, Math.min(bounds.height - photoCard.offsetHeight + padding, currentY));
 
-        photo.style.left = `${currentX}px`;
-        photo.style.top = `${currentY}px`;
+        photoCard.style.left = `${currentX}px`;
+        photoCard.style.top = `${currentY}px`;
       }
     };
 
@@ -105,17 +106,17 @@ class PhotoStack {
         isDragging = false;
         initialX = currentX;
         initialY = currentY;
-        photo.classList.remove('dragging');
+        photoCard.classList.remove('dragging');
       }
     };
 
     // Mouse events
-    photo.addEventListener('mousedown', dragStart);
+    photoCard.addEventListener('mousedown', dragStart);
     window.addEventListener('mousemove', drag);
     window.addEventListener('mouseup', dragEnd);
 
     // Touch events
-    photo.addEventListener('touchstart', dragStart, { passive: false });
+    photoCard.addEventListener('touchstart', dragStart, { passive: false });
     window.addEventListener('touchmove', drag, { passive: false });
     window.addEventListener('touchend', dragEnd);
     window.addEventListener('touchcancel', dragEnd);

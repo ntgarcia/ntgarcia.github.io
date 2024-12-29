@@ -19,6 +19,18 @@ const titleMap = {
   'about': 'Nathan Garcia - About'
 };
 
+// Load last active section on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const lastSection = localStorage.getItem('lastSection') || 'home';
+  const section = document.getElementById(lastSection);
+  if (section) {
+    sections.forEach(s => s.classList.remove('active'));
+    section.classList.add('active');
+    document.title = titleMap[lastSection] || 'Nathan Garcia';
+    window.location.hash = lastSection;
+  }
+});
+
 function toggleMenu() {
   mobileMenu.classList.toggle("active");
   document.body.style.overflow = mobileMenu.classList.contains("active")
@@ -44,6 +56,13 @@ allLinks.forEach(link => {
       
       // Update page title
       document.title = titleMap[target] || 'Nathan Garcia';
+      
+      // Save current section
+      localStorage.setItem('lastSection', target);
+      window.location.hash = target;
+      
+      // Reset scroll position of content
+      document.querySelector('.content').scrollTop = 0;
       
       if (link.closest('.mobile-menu-content')) {
         toggleMenu();

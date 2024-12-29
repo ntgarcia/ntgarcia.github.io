@@ -3,12 +3,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Geist", serif;
-  font-size: x-large;
+  font-size: large;
   text-transform: none;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -1px;
   line-height: 100%;
   scrollbar-gutter: stable;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 
 html, body {
@@ -23,7 +27,6 @@ body {
   display: flex;
   margin: auto;
   max-width: 1000px;
-  font-family: Arial, sans-serif;
   text-align: justify;
 }
 
@@ -39,26 +42,30 @@ body {
   z-index: 3;
 }
 
-.navbar a {
+.links, .socials {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.navbar a, 
+.mobile-menu a,
+#topbar a {
   color: black;
-  margin-bottom: 10px;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+  text-decoration: none;
+
 }
 
-.navbar a:hover {
-  text-decoration-style: dotted;
-}
+.navbar a:hover, 
+.mobile-menu a:hover,
+#topbar a:hover {
+  color: blue;
 
-.mobile-menu a {
-  color: black;
-  margin-bottom: 10px;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
 }
-
-.mobile-menu a:hover {
-  text-decoration-style: dotted;
+.navbar a:active, 
+.mobile-menu a:active,
+#topbar a:active {
+  color: blue;
 }
 
 .content {
@@ -79,7 +86,7 @@ body {
 
 .content a {
   color: black;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 1px;
 }
 
 .content a:hover {
@@ -146,18 +153,17 @@ button {
   width: 100%;
   height: 100%;
   background-color: white;
-  padding: 20px;
+  padding: 0 20px;
   overflow-y: auto;
 }
 
 .close-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  position: static;
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
+  padding: 0;
 }
 
 #intro {
@@ -211,7 +217,7 @@ button {
     z-index: 2;
     width: 100%;
     white-space: normal;
-    background: white;
+    background-color: white;
     border-bottom: 1px solid rgba(0,0,0,0.05);
   }
 
@@ -272,6 +278,55 @@ body:not(.home-active) .content:not(#home) {
   }
   
   .design-gallery img {
+    margin-bottom: 16px;
+  }
+}
+
+/* Add styles for mobile menu topbar */
+.mobile-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  margin-bottom: 20px;
+}
+
+.mobile-topbar a {
+  font-size: large;
+  font-weight: 500;
+}
+
+/* Update content heading styles */
+.content h1 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  margin-bottom: 16px;
+}
+
+/* Update spacing between content elements */
+.content p {
+  margin-bottom: 24px;
+}
+
+.content img {
+  margin-bottom: 24px;
+}
+
+.content .image-grid {
+  margin-bottom: 24px;
+}
+
+/* Update spacing for mobile */
+@media (max-width: 768px) {
+  .content p {
+    margin-bottom: 16px;
+  }
+  
+  .content img {
+    margin-bottom: 16px;
+  }
+  
+  .content .image-grid {
     margin-bottom: 16px;
   }
 } 
