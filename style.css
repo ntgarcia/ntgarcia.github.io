@@ -48,6 +48,7 @@ a {
 .container {
   width: auto;
   height: auto;
+  margin-top: 20px;
 }
 
 .inner {
@@ -141,6 +142,6 @@ img {
   }
 
   .inner {
-    transform: translateY(64px);
+    transform: translateY(40px);
   }
 }
