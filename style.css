@@ -102,10 +102,32 @@ img {
 .design-gallery img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
   display: block;
+  margin-top: 0px;
   margin-bottom: 24px;
   break-inside: avoid;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.button {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: #fff 0 0, #0000 0 0 0 2px, #0000000d 0 1px 1px -1px,
+    #0000000d 0 2px 2px -2px;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: whitesmoke;
 }
 
 @media screen and (min-width: 768px) {
