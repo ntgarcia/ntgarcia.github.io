@@ -1,651 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nathan Garcia</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230066ff'/></svg>"
-    />
-    <link rel="preload" href="styles/main.css" as="style" />
-    <link rel="preload" href="styles/photostack.css" as="style" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/photostack.css" />
-    <meta http-equiv="Cache-Control" content="max-age=31536000" />
-  </head>
-  <body>
-    <div class="navbar">
-      <h1 style="padding-bottom: 6px">
-        <a href="#" data-content="home"> Nathan Garcia </a>
-      </h1>
-      <p>
-        is a <b>designer ⁄ programmer ⁄ artist</b> based in
-        <b>Calgary, AB.</b> He is currently pursuing a
-        <b
-          >Bachelor of Computer Information Systems @ Mount Royal University.</b
-        >
-        Here is some of his work ↯
-      </p>
 
-      <div class="links">
-        <a href="#" data-content="newyyc"><span>01 NewYYC</span></a>
-        <a href="#" data-content="lyric"><span>02 Lyrical Data</span></a>
-        <a href="#" data-content="cail"><span>03 CAIL</span></a>
-        <a href="#" data-content="osu"><span>04 osu!</span></a>
-        <a href="#" data-content="oshi"><span>05 Oshi Oasis</span></a>
-        <a href="#" data-content="bolder"><span>06 Bolder Climbing</span></a>
-        <a href="#" data-content="design"><span>07 Freelance Design</span></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nathan Garcia</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Nathan Garcia is a designer ⁄ programmer ⁄ artist based in Calgary, AB." />
+  <meta property="og:title" content="Nathan Garcia" />
+  <meta property="og:description" content="Portfolio Website" />
+  <meta property="og:url" content="http://ntns.me" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1176" />
+  <meta property="og:image:height" content="686" />
+  <meta name="theme-color" content="#FFF" />
+  <link rel="icon" href="/img/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="inner">
+      <div class="head">
+        <div class="nav">
+          <h1 style="display: flex; gap: 14px; align-items: center; margin-top: 10px;">
+            <a href="/">work</a>
+            <a href="/pages/design.html">design</a>
+            <a href="/pages/now.html">now</a>
+            <a href="https://drive.google.com/file/d/1pgfAUfLzVltd_IPm8bdaAXxtQ0DbyuqB/view?usp=sharing"
+              target="_blank">resume <svg width="10" height="12" viewBox="0 0 12 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+                  fill="currentColor"></path>
+              </svg></a>
+          </h1>
+          <div class="icons">
+            <a href="mailto:hello@ntns.me" target="_blank">
+              <i class="fa fa-envelope" aria-hidden="true  "></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ntns/" target="_blank">
+              <i class="fa fa-linkedin-square" aria-hidden="true  "></i>
+            </a>
+            <a href="https://github.com/ntgarcia" target="_blank">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <!-- <p class="nav-divider"
+              style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; ">
+              |</p>
+            <a href="https://drive.google.com/file/d/1pgfAUfLzVltd_IPm8bdaAXxtQ0DbyuqB/view?usp=sharing"
+              class="button">Resume <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+                  fill="currentColor"></path>
+              </svg></a> -->
+          </div>
+        </div>
+        <h1 style="font-size: x-large; margin-bottom: 14px;">Hey! It's Nathan 👋</h1>
+        <p>
+          I'm a designer ⁄ programmer based in Calgary, AB.
+          <br />
+          Currently pursuing a
+          <a href="pages/bcis.html">Bachelor of Computer Information Systems</a>
+          @ Mount Royal University.
+
+        </p>
       </div>
-      <br />
-      <a href="#" data-content="about">About</a>
-      <br />
-      <br />
-      <div class="socials">
-        <a
-          href="https://drive.google.com/file/d/1s5mYacQVzQxPFSMy6_6XFY8brea_-S9x/view?usp=sharing"
-          target="_blank"
-          >Resume</a
-        >
-        <a href="https://www.linkedin.com/in/ntns/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/ntgarcia" target="_blank">GitHub</a>
-        <a href="mailto:hello@ntns.me" target="_blank">Email</a>
+
+      <h1>Selected Works</h1>
+      <br>
+
+      <div class="gallery">
+        <div class="newyyc">
+          <h1>
+            <a href="/pages/newyyc.html">NewYYC</a>
+          </h1>
+          <p>World Usability Day 2024</p>
+          <img src="/img/newyyc/cover.png" alt="newyyc" />
+        </div>
+
+        <div class="lyrics">
+          <h1>
+            <a href="/pages/lyrics.html">Do I Care About Lyrics?</a>
+          </h1>
+          <p>Lyrical Data Analysis</p>
+          <img src="/img/lyrics/cover.png" alt="lyrics" />
+        </div>
+
+        <div class="cail">
+          <h1>
+            <a href="/pages/cail.html">CAIL</a>
+          </h1>
+          <p>SAIT Capstone Project 2023</p>
+          <img src="/img/cail/cail-preview.png" alt="lyrics" />
+        </div>
+
+        <div class="movie">
+          <h1>
+            <a href="/pages/movie.html">Movie Club</a>
+          </h1>
+          <p>Minimal website showcasing my friend group's movie club.</p>
+          <img src="/img/movie/cover.png" alt="movie" />
+        </div>
+
       </div>
     </div>
+  </div>
+</body>
 
-    <div class="mobile-menu">
-      <div class="mobile-menu-overlay"></div>
-      <div class="mobile-menu-content">
-        <div class="mobile-topbar">
-          <a href="#" data-content="home"> Nathan Garcia </a>
-          <button class="close-button">✕</button>
-        </div>
-
-        <br />
-        <br />
-        <div class="links">
-          <a href="#" data-content="newyyc"><span>01 NewYYC</span></a>
-          <a href="#" data-content="lyric"><span>02 Lyrical Data</span></a>
-          <a href="#" data-content="cail"><span>03 CAIL</span></a>
-          <a href="#" data-content="osu"><span>04 osu!</span></a>
-          <a href="#" data-content="oshi"><span>05 Oshi Oasis</span></a>
-          <a href="#" data-content="bolder"><span>06 Bolder Climbing</span></a>
-          <a href="#" data-content="design"><span>07 Freelance Design</span></a>
-        </div>
-        <br />
-        <a href="#" data-content="about">About</a>
-        <br />
-        <br />
-        <div class="socials">
-          <a
-            href="https://drive.google.com/file/d/1s5mYacQVzQxPFSMy6_6XFY8brea_-S9x/view?usp=sharing"
-            target="_blank"
-            >Resume</a
-          >
-          <a href="https://www.linkedin.com/in/ntns/" target="_blank"
-            >LinkedIn</a
-          >
-          <a href="https://github.com/ntgarcia" target="_blank">GitHub</a>
-          <a href="mailto:hello@ntns.me" target="_blank">Email</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="content">
-      <div id="topbar">
-        <a href="#" data-content="home"> Nathan Garcia </a>
-        <button>☰</button>
-      </div>
-
-      <div id="home" class="active">
-        <div id="intro">
-          <p>
-            is a <b>designer ⁄ programmer ⁄ artist</b> based in
-            <b>Calgary, AB.</b> He is currently pursuing a
-            <b
-              >Bachelor of Computer Information Systems @ Mount Royal
-              University.</b
-            >
-            Here is some of his work ↯
-          </p>
-        </div>
-        <div class="photo-stack">
-          <div class="photo-card">
-            <div class="photo-title">
-              <a href="#" data-content="newyyc">NewYYC</a>
-              <span>2024</span>
-            </div>
-            <img src="img/newyyc/logo.png" alt="NewYYC" draggable="false" />
-          </div>
-
-          <div class="photo-card">
-            <div class="photo-title">
-              <a href="#" data-content="cail">CAIL</a>
-              <span>2023</span>
-            </div>
-            <img
-              src="img/cail/cail-preview.png"
-              alt="Preview"
-              draggable="false"
-            />
-          </div>
-
-          <div class="photo-card">
-            <div class="photo-title">
-              <a href="#" data-content="osu">osu!</a>
-              <span>2024</span>
-            </div>
-            <img src="img/osu/preview.png" alt="Mousepad" draggable="false" />
-          </div>
-
-          <div class="photo-card">
-            <div class="photo-title">
-              <a href="#" data-content="oshi">Oshi Oasis</a>
-              <span>2024</span>
-            </div>
-            <img src="img/oshi/brand-wall.png" alt="Preview" draggable="oshi" />
-          </div>
-
-          <div class="photo-card">
-            <div class="photo-title">
-              <a href="#" data-content="bolder">Bolder Climbing</a>
-              <span>2024</span>
-            </div>
-            <img src="img/bolder/beats.png" alt="beats" draggable="false" />
-          </div>
-
-          <div class="photo-card">
-            <div class="photo-title">
-              <a href="#" data-content="design">Freelance Design</a>
-              <span>2024</span>
-            </div>
-            <img src="img/design/newcie.png" alt="Mousepad" draggable="false" />
-          </div>
-        </div>
-      </div>
-      <div id="newyyc">
-        <h1 style="text-decoration: none; color: blue">P01 - NewYYC</h1>
-        <p>--</p>
-        <h1><span>01 Intro</span></h1>
-        <p>
-          On Nov. 14 2024 I attended the
-          <a href="https://librarycal.mtroyal.ca/event/3839957"
-            >World Usability Day Design Jam hosted by Calgary UX at Mount Royal
-            University.</a
-          >
-          It was an awesome night where we had an hour to quickly devise and
-          wireframe a product that fits the theme of World Usability Day 2024!
-          <br />
-          <br />
-          My group ended up winning first place based on our wireframes, ending
-          the event with some prizes and a great experience :]
-        </p>
-        <img
-          src="img/newyyc/winners.png"
-          alt="winners"
-          style="aspect-ratio: 3/2"
-        />
-        <br />
-        <h1><span>02 Concept</span></h1>
-        <p>
-          The theme of World Usability Day 2024 was ensuring that all voices,
-          especially those from underrepresented groups, are included in and can
-          meaningfully participate in civic discussions.
-        </p>
-        <img src="img/newyyc/wireframes.png" alt="wireframes" />
-        <p>
-          Our group decided to wireframe an easy to use website that allows
-          newcomers in Calgary to streamline their experience in finding events
-          and resources near them to better integrate them into what's happening
-          in the city.
-          <br />
-          <br />
-          I honestly ended up feeling really confident about our product, even
-          moreso after winning that I decided to use my weekend after to
-          actually build the project into fruition.
-        </p>
-        <br />
-        <h1><span>03 Designing</span></h1>
-        <p>
-          Using our already fantastic wireframes, I had a super easy time
-          designing it in Figma.
-        </p>
-        <img src="img/newyyc/figma.png" alt="Figma" />
-        <p>
-          I decided to name the project NewYYC, one because it's clear and
-          concise about what the website entails, and another is because I had a
-          really neat idea for the logo, wrapping YYC around itself.
-        </p>
-        <img src="img/newyyc/logo.png" alt="Logo" />
-        <p>
-          A disproportionate amount of my time was spent designing a map of
-          Calgary dividing its quadrants, it felt like a great experience for me
-          trying different approaches on the design and implementing it in code.
-        </p>
-        <img src="img/newyyc/map.png" alt="Map" />
-        <br />
-        <h1><span>04 Coding</span></h1>
-        <p>
-          With everything designed in Figma, the final step was building the
-          actual app. I ended up using Vercel to build and deploy the project,
-          using the standard React Framework.
-          <br />
-          <br />
-          Since I was pressed on time as I constrained myself for the project's
-          start and finish to be within the weekend, I ended up trying and using
-          Cursor for the first time to get the project built as fast as I can.
-          <br />
-          <br />
-          It ended up being really intuitive to use and gave me a strong
-          foundation to work off of in order to get the look and feel of the
-          website just how I wanted it.
-        </p>
-        <img src="img/newyyc/cursor.png" alt="Cursor" />
-        <p>
-          For the website's results, I ended up using
-          <a
-            href="https://data.calgary.ca/Recreation-and-Culture/Recreation-Program-Listings/q9hh-gfbx/about_data"
-            >the City of Calgary's official data and API</a
-          >
-          to obtain their recreational events.
-        </p>
-        <img src="img/newyyc/api.png" alt="API" />
-        <br />
-        <h1><span>05 Final Outcome</span></h1>
-        <p>
-          The final build of the project ended up looking amazing, and worked
-          seamlessly. I ended up learning a lot about working on a time
-          constraint, both from the design jam and the weekend project!
-        </p>
-        <div class="image-grid">
-          <img src="img/newyyc/01.png" alt="01" />
-          <img src="img/newyyc/02.png" alt="02" />
-          <img src="img/newyyc/03.png" alt="03" />
-          <img src="img/newyyc/04.png" alt="04" />
-        </div>
-      </div>
-      <div id="lyric">
-        <h1 style="text-decoration: none; color: blue">P02 - Lyrical Data</h1>
-        <p>--</p>
-        <h1><span>01 Background</span></h1>
-        <p>
-          I love listening to music. I enjoy hearing beautiful melodies,
-          exquisite sound design, and out-of-the-box production techniques that
-          make music interesting.
-          <br />
-          <br />
-          However, I find that I don't always pay attention to the lyrics.
-          Whenever I listen to music with friends, I often find that they would
-          be quick to point out a lyric in a song that may stand out, whether it
-          be good or bad.
-          <br />
-          <br />
-          My response to this would usually be me not even realizing it was in
-          the song in the first place! 🤷‍♂️ Because of this, I decided to analyze
-          my Spotify stats to see if it actually reflects my tendency to not
-          care about lyrics.
-        </p>
-        <br />
-        <h1>
-          <span>02 Fetching Top Tracks from Spotify</span>
-        </h1>
-        <p>
-          I used the Spotify API to access my listening history. After signing
-          up for an API key at the
-          <a href="https://beta.developer.spotify.com/"
-            >Spotify for Developers</a
-          >
-          page, I was able to use
-          <a href="https://github.com/plamere/spotipy">Spotipy</a> to access my
-          top artists, top tracks, and metadata for each song.
-        </p>
-        <img src="img/lyrics/spotipy.png" alt="spotipy" />
-        <p>
-          Top tracks are stored in three separate ranges, short-term (4 weeks),
-          medium-term (6 months), and long-term (all-time).
-        </p>
-        <img src="img/lyrics/csv.png" alt="csv" />
-        <p>
-          I decided to store all of this data in a .csv file so that my main
-          comparison for data analysis would be between the time ranges.
-        </p>
-        <img src="img/lyrics/toptracks.png" alt="toptracks" />
-        <h1>
-          <span>03 Fetching Lyrics from Genius</span>
-        </h1>
-        <p>
-          Now that I have all of my top tracks, I need to fetch the lyrics of
-          each song. I decided to use
-          <a href="https://lyricsgenius.readthedocs.io/en/master/"
-            >LyricsGenius</a
-          >
-          for this, as I can easily match the metadata from the .csv file to
-          quickly obtain all of the lyrics.
-        </p>
-        <img src="img/lyrics/json.png" alt="json" />
-        <p>
-          Just like Spotipy, all I needed to do was sign up for an API key. From
-          there, I was able to save all of the lyrics in a .json file.
-        </p>
-        <img src="img/lyrics/metadata.png" alt="metadata" />
-        <h1>
-          <span>04 Lyric Analysis</span>
-        </h1>
-        <p>
-          Scraping Spotify and Genius was the easy part; now comes the lyric
-          analysis. My main three metrics to decipher if I care about lyrics or
-          not were: Q01: How much of what I listen to is just repeated /
-          barebones lyrics? (Line Repetition) Q02: How much of what I listen to
-          contains complex verses? (Verse complexity) Q03: How much of what I
-          listen to contains unique words? (Word diversity)
-        </p>
-        <img src="img/lyrics/metrics.png" alt="metrics" />
-        <p>
-          A01: Lyric repetition was calculated by splitting the lyrics into
-          lines and simply counting if the lines were repeating. A02: Complex
-          verses were analyzed in each song by counting how many unique verses
-          exist. A03: Unique words were calculated by finding the ratio of how
-          many times a word appears and comparing it to the all of the words.
-        </p>
-        <h1>
-          <span>05 Data Visualisation</span>
-        </h1>
-        <p>
-          Now that the lyrics were analyzed, it's time to visualise the data. I
-          mainly used Matplotlib to visualise the data, opting to maximise
-          readability by creating bar charts for each listening range. I even
-          decided to display metric interpretations depending on how each range
-          compares to each other.
-        </p>
-        <img src="../img/lyrics/interpret.png" alt="interpret" />
-        <h1>
-          <span>06 Analysis Results</span>
-        </h1>
-        <p>
-          With everything setup, it was finally time to display the data! All I
-          had to do was run my python program to analyze the lyrics. The output
-          was three graphs generated by Matplotlib, and the results ended up
-          surprising me...
-        </p>
-        <img src="../img/lyrics/results.png" alt="results" />
-        <p>
-          Comparing my overall top tracks with my recent top tracks, I can see
-          that my overall listening habits have gravitated towards my
-          subconscious caring for lyrics. I've been listening to less repetitive
-          and more complex songs, albeit with a lot less vocabulary diversity,
-          which is what surprised me most.
-        </p>
-        <h1>
-          <span>07 Experience and Findings</span>
-        </h1>
-        <p>
-          This project was a fun way for me to combine my passion of music along
-          with coding and data visualisation in order to try and find
-          introspective answers to how my listening to music has changed over
-          time. I learned a lot about using different API's in conjunction with
-          each other along with file creation between them. Furthermore, I
-          learned even more about how to analyse and visualise data to align it
-          with my own criteria and present it in a way that is easy to
-          understand Moving forward, I'd like to try and refine my methods of
-          analysing data in comparison with a set criteria. I'd also like to
-          explore more ways in improving how I can visualise data, specifically
-          with more eye-catching models and interactivity.
-        </p>
-      </div>
-      <div id="cail">
-        <h1 style="text-decoration: none; color: blue">P03 - CAIL</h1>
-        <p>--</p>
-        <h1><span>01 Intro</span></h1>
-        <p>
-          For my 2023 Capstone Project, my group worked closely with the
-          Canadian Alliance for Intergenerational Living to create an essential
-          task tracker web app so that the organization can monitor student
-          progress.
-        </p>
-        <h1><span>02 Problem</span></h1>
-        <p>
-          The organization allows affordable housing to students in exchange for
-          spending time with seniors. In order to accurately log these tasks,
-          they needed an app that can be used by both the organization and
-          students.
-        </p>
-        <h1><span>03 Solution</span></h1>
-        <p>
-          A lightweight, flexible web app that enables students to easily create
-          tasks and log their monthly progress, in addition to allowing admins
-          to easily manage and track student data at a glance.
-        </p>
-        <img src="..\img\cail\cail-preview.png" alt="Solution" />
-        <h1><span>04 Research Methods</span></h1>
-        <p>
-          We met with Silvera, the company working with CAIL to house and work
-          directly with the students, in order to acquire all of their
-          requirements for what our web app should provide. In general, Silvera
-          wanted the app to be as hands off as possible with an emphasis on ease
-          of use and accessibility. Students should be using the app solely to
-          mark what tasks they have done and to track what they need to do, and
-          both CAIL and Silvera will only use the app to collect the task data
-          and lightly manage users.
-        </p>
-        <img src="..\img\cail\research.png" alt="Research" />
-        <h1>
-          <span>05 High Level Requirements</span>
-        </h1>
-        <p>
-          We divided our requirements based on use case and view, with the app
-          being split on Student Use Case and Admin Use Case:
-          <br /><br />
-          Student: <br />
-          01 Task Creation, Management and Tracking <br />
-          02 Calendar Functionality <br />
-          03 Hour tracking <br />
-          <br />
-          Admin: <br />
-          01 Creation and Management of Student Information <br />
-          02 Data Retrieval for Reporting <br />
-          03 Banked Hours Tracking <br />
-        </p>
-        <img src="..\img\cail\req.png" alt="Requirements" />
-        <h1>
-          <span>06 Evaluation and Testing</span>
-        </h1>
-        <p>
-          Upon contact with CAIL we established client check-ins every 2 weeks,
-          with most of testing done internally until March where we had our
-          clients test the app as both student and admin. The continuous client
-          check-ins helped us stay focused on what needs to be done on a
-          bi-weekly basis. Client testing was integral in allowing us to add in
-          additional tweaks and changes that greatly improved the app for
-          student and admin use.
-        </p>
-        <h1>
-          <span>07 Final Outcome</span>
-        </h1>
-        <p>
-          By the end of the semester we were able to successfully integrate all
-          requirements and evaluations to create the desired webapp for the
-          client. The tools used to create the webapp included Figma for the
-          UI/UX and wireframing, MongoDB to handle the backend, and a frontend
-          tech stack including Vercel, React, NextJS, and TailwindCSS.
-        </p>
-        <div class="image-grid">
-          <img src="..\img\cail\login.png" alt="login" />
-          <img src="..\img\cail\user_task.png" alt="create task" />
-          <img src="..\img\cail\admin_home.png" alt="admin home" />
-          <img src="..\img\cail\admin_user.png" alt="create user" />
-        </div>
-        <h1>
-          <span>08 Future Work</span>
-        </h1>
-        <p>
-          Upon the completion and presentation of this Capstone Project, CAIL
-          notified us that they would be integrating the app within the
-          organization by the end of the summer. It would be launched as the
-          students start their Fall Semester, with additional student testing
-          done beforehand. Short term goals for the webapp that would be
-          completed before full launch will include: 01 Transfer of deployment
-          and build of app across platforms if needed 02 Accessibility
-          improvements such as localization and screen reader optimization 03
-          Outlook integration, allowing for email notifications
-        </p>
-      </div>
-      <div id="osu">
-        <h1 style="text-decoration: none; color: blue">P04 - osu!</h1>
-        <p>--</p>
-        <h1><span>01 Mousepad</span></h1>
-        <p>
-          I was commissioned by the awesome people on osu! to design a mousepad
-          design that would be sold on limited time on their online store.
-        </p>
-        <img src="img/osu/mousepad.png" alt="mousepad" />
-        <img src="img/osu/storepage.png" alt="storepage" />
-        <p>
-          They even sent me the mousepad for free! I really love how it ended up
-          looking physically :]
-        </p>
-        <img src="img/osu/physical.png" alt="physical" />
-        <h1><span>02 [REDACTED]</span></h1>
-        <p>Coming soon! 👕</p>
-        <h1><span>03 [REDACTED]</span></h1>
-        <p>Coming soon! 🖱️</p>
-      </div>
-      <div id="oshi">
-        <h1 style="text-decoration: none; color: blue">P05 - Oshi Oasis</h1>
-        <p>--</p>
-        <h1><span>01 Intro</span></h1>
-        <p>
-          I was commissioned by the awesome people running Oshi Oasis as part of
-          Holiday Matsuri to design branding, social, and poster graphics for
-          their convention!
-        </p>
-        <h1><span>02 Branding</span></h1>
-        <img src="img/oshi/logo - almost black.png" alt="logo" />
-        <img src="img/oshi/brand-wall.png" alt="brand wall" />
-        <h1><span>03 Social</span></h1>
-        <img src="img/oshi/Twitter header.png" alt="twitter" />
-        <div class="image-grid">
-          <img src="img/oshi/Instagram post - 1.png" alt="ig post" />
-          <img src="img/oshi/Instagram post - 2.png" alt="ig post" />
-          <img src="img/oshi/Instagram post - 3.png" alt="ig post" />
-          <img src="img/oshi/Instagram post - 4.png" alt="ig post" />
-        </div>
-      </div>
-      <div id="bolder">
-        <h1 style="text-decoration: none; color: blue">
-          P06 - Bolder Climbing
-        </h1>
-        <p>--</p>
-        <h1><span>01 Intro</span></h1>
-        <p>
-          Aside from my full time studies, I work part time on the weekends at
-          my local climbing gym. I've been contributing efforts outside of my
-          work by offering designs for their social media.
-        </p>
-        <h1><span>02 Event Posters</span></h1>
-        <div class="image-grid">
-          <img src="img/bolder/beats.png" alt="" />
-          <img src="img/bolder/ladies night.png" alt="" />
-          <img src="img/bolder/winter community night.png" alt="" />
-          <img src="img/bolder/triple threat finals.png" alt="" />
-          <img src="img/bolder/triple threat finals - RESULTS MEN.png" alt="" />
-          <img
-            src="img/bolder/triple threat finals - RESULTS WOMEN.png"
-            alt=""
-          />
-        </div>
-        <h1><span>03 Social Posts</span></h1>
-        <div class="image-grid">
-          <img src="img/bolder/Instagram post - 9.png" alt="" />
-          <img src="img/bolder/Instagram post - 12.png" alt="" />
-          <img src="img/bolder/Instagram post - 13.png" alt="" />
-          <img src="img/bolder/Instagram post - 14.png" alt="" />
-        </div>
-        <h1><span>04 Story Posts</span></h1>
-        <div class="image-grid">
-          <img src="img/bolder/iPhone 16 - 2.png" alt="" />
-          <img src="img/bolder/iPhone 16 - 3.png" alt="" />
-        </div>
-      </div>
-      <div id="design">
-        <h1 style="text-decoration: none; color: blue">
-          P07 - Freelance Design
-        </h1>
-        <p>--</p>
-        <h1><span>01 Designs</span></h1>
-        <p>
-          Random assortment of freelance design I've created from 2022 onwards.
-        </p>
-        <div class="design-gallery">
-          <img src="img/design/chatpreview.png" alt="" />
-          <img src="img/design/f2u-2xko-preview.gif" alt="" />
-          <img src="img/design/FcVBXNYaMAQHU_e.jpg" alt="" />
-          <img src="img/design/Frame 1.png" alt="" />
-          <img src="img/design/full preview.jpg" alt="" />
-          <img src="img/design/kuho.jpg" alt="" />
-          <img src="img/design/logo.png" alt="" />
-          <img src="img/design/LOGO V4.png" alt="" />
-          <img src="img/design/May Overlay.png" alt="" />
-          <img src="img/design/newcie.png" alt="" />
-          <img src="img/design/orange.png" alt="" />
-          <img src="img/design/preview - Copy (2).png" alt="" />
-          <img src="img/design/preview-edit.png" alt="" />
-          <img src="img/design/preview.png" alt="" />
-          <img src="img/design/Preview - Copy.png" alt="" />
-          <img src="img/design/Preview_D.png" alt="" />
-          <img src="img/design/remnep.jpg" alt="" />
-          <img src="img/design/twitter preview full.png" alt="" />
-          <img src="img/design/Twitter post - 1 - Copy.png" alt="" />
-          <img src="img/design/Twitter post - 1.png" alt="" />
-          <img src="img/design/Twitter post - 3.png" alt="" />
-          <img src="img/design/Twitter-post-FINAL.jpg" alt="" />
-        </div>
-      </div>
-      <div id="about">
-        <h1>About Me</h1>
-        <p>
-          Nathan Garcia (b. 2000, Quezon City) is a designer ⁄ programmer ⁄
-          artist with a passion for combining function with creativity to craft
-          digital experiences. When he's not immersed in programming or
-          designing, you can find him thrifting, DJing, or in the climbing gym
-          sending his projects.
-        </p>
-        <img src="img/him.png" alt="placeholder" style="aspect-ratio: 4/3" />
-        <p>
-          Currently, he is pursuing his Bachelor of Computer Information Systems
-          at Mount Royal University. He can be contacted at hello@ntns.me, found
-          on
-          <a href="https://www.linkedin.com/in/ntns/" target="_blank"
-            >LinkedIn</a
-          >
-          , and on
-          <a href="https://github.com/ntgarcia" target="_blank"> Github.</a> A
-          copy of his resume can be found
-          <a
-            href="https://drive.google.com/file/d/1s5mYacQVzQxPFSMy6_6XFY8brea_-S9x/view?usp=sharing"
-            >here.</a
-          >
-        </p>
-        <iframe
-          style="border-radius: 12px"
-          src="https://open.spotify.com/embed/playlist/32bEiqvZCzVwJb0Ln9ONSQ?utm_source=generator"
-          width="100%"
-          height="352"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
-      </div>
-    </div>
-
-    <script src="scripts/navigation.js"></script>
-    <script src="scripts/photostack.js"></script>
-  </body>
 </html>
