@@ -180,4 +180,9 @@ img {
   .nav h1 {
     font-size: 18px;
   }
+
+  /* .nav .button,
+  .nav-divider {
+    display: block;
+  } */
 }
