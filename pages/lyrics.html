@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>Lyrics - Nathan Garcia</title>
     <link rel="stylesheet" href="/style.css" />
     <meta
       name="description"
-      content="Nathan Garcia is a designer ⁄ programmer ⁄ artist based in Calgary, AB."
-    />
+      content="Nathan Garcia is a designer ⁄ programmer ⁄ artist based in Calgary, AB." />
     <meta property="og:title" content="Nathan Garcia" />
     <meta property="og:description" content="Portfolio Website" />
     <meta property="og:url" content="http://ntns.me" />
@@ -27,131 +28,142 @@
       <br />
       <h1><span>01 Background</span></h1>
       <p>
-        I love listening to music. I enjoy hearing beautiful melodies, exquisite
-        sound design, and out-of-the-box production techniques that make music
-        interesting.
+        I love listening to music. I enjoy hearing beautiful melodies,
+        exquisite sound design, and out-of-the-box production
+        techniques that make music interesting.
         <br />
         <br />
-        However, I find that I don't always pay attention to the lyrics.
-        Whenever I listen to music with friends, I often find that they would be
-        quick to point out a lyric in a song that may stand out, whether it be
-        good or bad.
+        However, I find that I don't always pay attention to the
+        lyrics. Whenever I listen to music with friends, I often find
+        that they would be quick to point out a lyric in a song that
+        may stand out, whether it be good or bad.
         <br />
         <br />
-        My response to this would usually be me not even realizing it was in the
-        song in the first place! 🤷‍♂️ Because of this, I decided to analyze my
-        Spotify stats to see if it actually reflects my tendency to not care
-        about lyrics.
+        My response to this would usually be me not even realizing it
+        was in the song in the first place! 🤷‍♂️ Because of this, I
+        decided to analyze my Spotify stats to see if it actually
+        reflects my tendency to not care about lyrics.
       </p>
       <br />
       <h1>
         <span>02 Fetching Top Tracks from Spotify</span>
       </h1>
       <p>
-        I used the Spotify API to access my listening history. After signing up
-        for an API key at the
+        I used the Spotify API to access my listening history. After
+        signing up for an API key at the
         <a href="https://beta.developer.spotify.com/" target="_blank"
           >Spotify for Developers</a
         >
         page, I was able to use
-        <a href="https://github.com/plamere/spotipy" target="_blank">Spotipy</a>
-        to access my top artists, top tracks, and metadata for each song.
+        <a href="https://github.com/plamere/spotipy" target="_blank"
+          >Spotipy</a
+        >
+        to access my top artists, top tracks, and metadata for each
+        song.
       </p>
       <img src="/img/lyrics/spotipy.png" alt="spotipy" />
       <p>
-        Top tracks are stored in three separate ranges, short-term (4 weeks),
-        medium-term (6 months), and long-term (all-time).
+        Top tracks are stored in three separate ranges, short-term (4
+        weeks), medium-term (6 months), and long-term (all-time).
       </p>
       <img src="/img/lyrics/csv.png" alt="csv" />
       <p>
-        I decided to store all of this data in a .csv file so that my main
-        comparison for data analysis would be between the time ranges.
+        I decided to store all of this data in a .csv file so that my
+        main comparison for data analysis would be between the time
+        ranges.
       </p>
       <img src="/img/lyrics/toptracks.png" alt="toptracks" />
       <h1>
         <span>03 Fetching Lyrics from Genius</span>
       </h1>
       <p>
-        Now that I have all of my top tracks, I need to fetch the lyrics of each
-        song. I decided to use
-        <a href="https://lyricsgenius.readthedocs.io/en/master/" target="_blank"
+        Now that I have all of my top tracks, I need to fetch the
+        lyrics of each song. I decided to use
+        <a
+          href="https://lyricsgenius.readthedocs.io/en/master/"
+          target="_blank"
           >LyricsGenius</a
         >
-        for this, as I can easily match the metadata from the .csv file to
-        quickly obtain all of the lyrics.
+        for this, as I can easily match the metadata from the .csv
+        file to quickly obtain all of the lyrics.
       </p>
       <img src="/img/lyrics/json.png" alt="json" />
       <p>
-        Just like Spotipy, all I needed to do was sign up for an API key. From
-        there, I was able to save all of the lyrics in a .json file.
+        Just like Spotipy, all I needed to do was sign up for an API
+        key. From there, I was able to save all of the lyrics in a
+        .json file.
       </p>
       <img src="/img/lyrics/metadata.png" alt="metadata" />
       <h1>
         <span>04 Lyric Analysis</span>
       </h1>
       <p>
-        Scraping Spotify and Genius was the easy part; now comes the lyric
-        analysis. My main three metrics to decipher if I care about lyrics or
-        not were:
-        <br />Q01: How much of what I listen to is just repeated / barebones
-        lyrics? (Line Repetition) <br />Q02: How much of what I listen to
-        contains complex verses? (Verse complexity) <br />Q03: How much of what
-        I listen to contains unique words? (Word diversity)
+        Scraping Spotify and Genius was the easy part; now comes the
+        lyric analysis. My main three metrics to decipher if I care
+        about lyrics or not were:
+        <br />Q01: How much of what I listen to is just repeated /
+        barebones lyrics? (Line Repetition) <br />Q02: How much of
+        what I listen to contains complex verses? (Verse complexity)
+        <br />Q03: How much of what I listen to contains unique words?
+        (Word diversity)
       </p>
       <img src="/img/lyrics/metrics.png" alt="metrics" />
       <p>
-        A01: Lyric repetition was calculated by splitting the lyrics into lines
-        and simply counting if the lines were repeating. <br />
-        A02: Complex verses were analyzed in each song by counting how many
-        unique verses exist. <br />A03: Unique words were calculated by finding
-        the ratio of how many times a word appears and comparing it to the all
-        of the words.
+        A01: Lyric repetition was calculated by splitting the lyrics
+        into lines and simply counting if the lines were repeating.
+        <br />
+        A02: Complex verses were analyzed in each song by counting how
+        many unique verses exist. <br />A03: Unique words were
+        calculated by finding the ratio of how many times a word
+        appears and comparing it to the all of the words.
       </p>
       <br />
       <h1>
         <span>05 Data Visualisation</span>
       </h1>
       <p>
-        Now that the lyrics were analyzed, it's time to visualise the data. I
-        mainly used Matplotlib to visualise the data, opting to maximise
-        readability by creating bar charts for each listening range. I even
-        decided to display metric interpretations depending on how each range
-        compares to each other.
+        Now that the lyrics were analyzed, it's time to visualise the
+        data. I mainly used Matplotlib to visualise the data, opting
+        to maximise readability by creating bar charts for each
+        listening range. I even decided to display metric
+        interpretations depending on how each range compares to each
+        other.
       </p>
       <img src="/img/lyrics/interpret.png" alt="interpret" />
       <h1>
         <span>06 Analysis Results</span>
       </h1>
       <p>
-        With everything setup, it was finally time to display the data! All I
-        had to do was run my python program to analyze the lyrics. The output
-        was three graphs generated by Matplotlib, and the results ended up
-        surprising me...
+        With everything setup, it was finally time to display the
+        data! All I had to do was run my python program to analyze the
+        lyrics. The output was three graphs generated by Matplotlib,
+        and the results ended up surprising me...
       </p>
       <img src="/img/lyrics/results.png" alt="results" />
       <p>
-        Comparing my overall top tracks with my recent top tracks, I can see
-        that my overall listening habits have gravitated towards my subconscious
-        caring for lyrics. I've been listening to less repetitive and more
-        complex songs, albeit with a lot less vocabulary diversity, which is
-        what surprised me most.
+        Comparing my overall top tracks with my recent top tracks, I
+        can see that my overall listening habits have gravitated
+        towards my subconscious caring for lyrics. I've been listening
+        to less repetitive and more complex songs, albeit with a lot
+        less vocabulary diversity, which is what surprised me most.
       </p>
       <br />
       <h1>
         <span>07 Experience and Findings</span>
       </h1>
       <p>
-        This project was a fun way for me to combine my passion of music along
-        with coding and data visualisation in order to try and find
-        introspective answers to how my listening to music has changed over
-        time. I learned a lot about using different API's in conjunction with
-        each other along with file creation between them. Furthermore, I learned
-        even more about how to analyse and visualise data to align it with my
-        own criteria and present it in a way that is easy to understand Moving
-        forward, I'd like to try and refine my methods of analysing data in
-        comparison with a set criteria. I'd also like to explore more ways in
-        improving how I can visualise data, specifically with more eye-catching
-        models and interactivity.
+        This project was a fun way for me to combine my passion of
+        music along with coding and data visualisation in order to try
+        and find introspective answers to how my listening to music
+        has changed over time. I learned a lot about using different
+        API's in conjunction with each other along with file creation
+        between them. Furthermore, I learned even more about how to
+        analyse and visualise data to align it with my own criteria
+        and present it in a way that is easy to understand Moving
+        forward, I'd like to try and refine my methods of analysing
+        data in comparison with a set criteria. I'd also like to
+        explore more ways in improving how I can visualise data,
+        specifically with more eye-catching models and interactivity.
       </p>
     </div>
   </body>

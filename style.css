@@ -41,8 +41,27 @@ a {
   border-bottom: 2px solid #797979;
 }
 
-i {
-  color: #f0f0f0;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.icons a {
+  color: white;
+  transition: color 0.2s;
+  border-bottom: none;
+}
+
+.icons a:hover {
+  color: #c9c9c9;
 }
 
 /* .container {
@@ -64,13 +83,6 @@ i {
 
 .head {
   margin-bottom: 24px;
-}
-
-.social {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 img {
@@ -128,14 +140,14 @@ img {
   border: 1px solid rgba(110, 110, 110, 0.08);
   border-radius: 8px;
   background-color: #292929;
-  box-shadow: #c9c9c9 0 0, #9c9c9c00 0 0 0 2px, #9696960d 0 1px 1px -1px,
-    #e4dede0d 0 2px 2px -2px;
+  box-shadow: #c9c9c9 0 0, #9c9c9c00 0 0 0 2px,
+    #9696960d 0 1px 1px -1px, #e4dede0d 0 2px 2px -2px;
   transition: background-color 0.2s;
   white-space: nowrap;
 }
 
 .button:hover {
-  background-color: whitesmoke;
+  background-color: #1f1f1f;
 }
 
 .course {
