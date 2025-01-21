@@ -138,7 +138,7 @@ img {
 .gallery img {
   aspect-ratio: 16/9;
   margin-top: 4px;
-  margin-bottom: 30px;
+  margin-bottom: 64px;
 }
 
 .image-grid {
