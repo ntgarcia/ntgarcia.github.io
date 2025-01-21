@@ -107,7 +107,7 @@ hr {
 
 .work-title {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
   margin-bottom: 6px;
 }
@@ -192,8 +192,25 @@ img {
   white-space: nowrap;
 }
 
+.button-main {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid rgba(110, 110, 110, 0.08);
+  border-radius: 8px;
+  color: #292929;
+  background-color: #e6e6e6;
+  box-shadow: #c9c9c9 2 0;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
 .button:hover {
   background-color: #1f1f1f;
+}
+
+.button-main:hover {
+  background-color: #fafafa;
 }
 
 .course {
