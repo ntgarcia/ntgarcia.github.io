@@ -224,7 +224,7 @@ img {
   margin-bottom: 20px;
 }
 
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
   from {
     transform: translate3d(0, 40px, 0);
   }
@@ -261,7 +261,7 @@ img {
   opacity: 0;
   animation-name: fadeInUp;
   -webkit-animation-name: fadeInUp;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .container {
