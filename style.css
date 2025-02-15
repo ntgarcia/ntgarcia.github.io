@@ -17,6 +17,13 @@ body {
   margin-bottom: 4rem;
   background-color: #111111;
   color: #f0f0f0;
+  opacity: 0.6;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 h1 {
@@ -102,6 +109,8 @@ hr {
   height: auto;
   margin-top: 20px;
   background-color: #111111;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .inner {
@@ -128,8 +137,8 @@ hr {
   border: 1px solid rgba(110, 110, 110, 0.08);
   border-radius: 8px;
   background-color: #202020;
-  box-shadow: #c9c9c9 0 0, #9c9c9c00 0 0 0 2px,
-    #9696960d 0 1px 1px -1px, #e4dede0d 0 2px 2px -2px;
+  box-shadow: #c9c9c9 0 0, #9c9c9c00 0 0 0 2px, #9696960d 0 1px 1px -1px,
+    #e4dede0d 0 2px 2px -2px;
   white-space: nowrap;
   margin-bottom: 2px;
 }
@@ -193,8 +202,8 @@ img {
   border: 1px solid rgba(110, 110, 110, 0.08);
   border-radius: 8px;
   background-color: #292929;
-  box-shadow: #c9c9c9 0 0, #9c9c9c00 0 0 0 2px,
-    #9696960d 0 1px 1px -1px, #e4dede0d 0 2px 2px -2px;
+  box-shadow: #c9c9c9 0 0, #9c9c9c00 0 0 0 2px, #9696960d 0 1px 1px -1px,
+    #e4dede0d 0 2px 2px -2px;
   transition: background-color 0.2s;
   white-space: nowrap;
 }
